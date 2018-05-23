@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="header__greenMask"></div>
+        <div class="wrapper">
+            <div class="header__contacts header-contacts">
+                <a href="tel:+74997206968" class="header-contacts__url header-contacts__url_phone">499-720-69-68</a>
+                <a href="mailto:mail@mail.ru" class="header-contacts__url header-contacts__url_mail">email:
+                    mail@mail.ru</a>
+                <div class="headerContactsSocial">
+                    <a href="#" class="headerContactsSocial__yt"></a>
+                    <a href="#" class="headerContactsSocial__fb"></a>
+                    <a href="#" class="headerContactsSocial__im"></a>
+                </div>
+            </div>
+            <a href="#" class="header__logo"></a>
+            <nav id="menu" class="header-nav">
+                <ul class="header-nav-items">
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">О нас</a></li>
+                    <li class="header-nav-items__item header-nav-items__item_parent"><a href="#"
+                                                                                        class="header-nav-items__link header-nav-items__link_parent">Услуги</a>
+                        <ul class="header-nav__submenu header-submenu-list" style="display: none;">
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Отзывы</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Благодарности</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Новости</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Клиенты</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#menu" class="hamburger hamburger--emphatic">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            </a>
+        </div>
+    </header>
+    <section class="promo-section">
+        <div class="wrapper">
+            <div class="row">
+                <div class="promo-section__left-side">
+                    <span class="promo-section__sub-header promo-section__sub-header_have-bord promo-section__header--pos">
+                        охрана стоянок и парковок</span>
+                    <div class="promo-section__text">
+                        Оказываем услуги охраны промышленных объектов любого типа.
+                        Посчитайте стоимость на нашем сайте, и мы подготовим для вас
+                        индивидуальные условия сотрудничества.
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal"
+                       class="button promo-section__button button_green button_cont-fit">Расчитать стоимость охраны</a>
+                </div>
+            </div>
+
+            <div id="smoke" class="smokeParallax">
+                <div data-depth="-0.8" class="smokeRightTop"></div>
+                <div data-depth="1.3" class="smokeLeftTop"></div>
+                <div data-depth="0.4" class="smokeLeftBottom"></div>
+                <div data-depth="0.5" class="smokeRightBottom"></div>
+                <div data-depth="-0.1" class="smokeCenter"></div>
+            </div>
+        </div>
+        <div class="promo-section__right-side">
+            <div id="parallxWrapper">
+                <div class="parallxBackground">
+                    <div class="parallxLayerFirst shadowed"
+                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() * 0.9 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() * 0.9 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <div class="parallxLayerSecond shadowed"
+                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <div class="parallxLayerThird shadowed"
+                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <!--<svg height="0" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<filter id="drop-shadow">-->
+                    <!--<feGaussianBlur in="SourceAlpha" stdDeviation="4"/>-->
+                    <!--<feOffset dx="12" dy="12" result="offsetblur"-->
+                    <!--data-bind="attr: { dx: - relativeMouse.x()}"/>-->
+                    <!--<feFlood flood-color="rgba(0,0,0,0.5)"/>-->
+                    <!--<feComposite in2="offsetblur" operator="in"/>-->
+                    <!--<feMerge>-->
+                    <!--<feMergeNode/>-->
+                    <!--<feMergeNode in="SourceGraphic"/>-->
+                    <!--</feMerge>-->
+                    <!--</filter>-->
+                    <!--</svg>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="promo-section__breadcrumbs">
+            <div class="wrapper">
+                <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
+                            <span itemprop="name">Услуги</span></a>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
+                            <span itemprop="name">Охрана объектов</span></a>
+                        <meta itemprop="position" content="3"/>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Охрана складов и предприятий</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <main>
+        <section class="aboutSection">
+            <div class="wrapper aboutSection__inner">
+                <div class="row row--justifySB">
+                    <div class="article aboutSection__article"><h2
+                            class="section-header aboutSection__header section-header_have-logo">
+                        форпост-север</h2>
+                        <h3 class="sectionSubHeader aboutSection__sub-header">надежное охранное
+                            предприятие</h3>
+                        <p class="article__paragraph">Наше предприятие осуществляет свою деятельность в
+                            строгом соответствии с Законом РФ «О частной детективной и охранной
+                            деятельности». На всё виды деятельности имеются государственные лицензии. Оно
+                            укомплектовано подготовленными сотрудниками, имеющими разрешение на данный вид
+                            деятельности. </p>
+                        <p class="article__paragraph">Все охранники, экипированы форменной одеждой,
+                            утвержденного ГУВД г. Москвы образца и необходимыми специальными средствами.
+                            Сотрудничество с правоохранительными органами и противопожарной службой
+                            Зеленоградского округа позволяет эффективно защищать интересы наших
+                            клиентов.</p>
+                        <p class="article__paragraph article__paragraph_marked">Во время работы
+                            предусматривается наша материальная ответственность и всесторонний учет Ваших
+                            интересов.</p> <a href="#" data-toggle="modal" data-target="#myModal"
+                                              class="article__button button button_green button_shadowed">Заказать
+                            консультацию</a></div>
+                    <figure class="aboutSectionBoss">
+                        <div class="aboutSectionBoss__portrait"><img
+                                src="http://forpost-sever.ru/wp-content/themes/forpost/images/boss.jpg"
+                                alt=""></div>
+                        <figcaption class="aboutSectionBoss__caption">Ю.П. Сысоев <span>ген.директор</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="licences ourThanks--pos">
+            <div class="wrapper">
+                <h3 class="textBlock__header">Официальные документы</h3>
+                <div class="row row--justifySA">
+                    <div class="licences__container">
+                    <div class="ourThanks__slide">
+                        <img class="ourThanks__thanksgiven" src="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-233x330.png" data-full="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-724x1024.png" alt="Грамота ООО ЧОП Форпост-Север от начальника ОВД по району Матушкино">
+                    </div>
+                        <div class="licences__caption">Лицензия ФСБ на работу со сведениями, составляющими государственную тайну</div>
+                    </div>
+                    <div class="licences__container">
+                        <div class="ourThanks__slide">
+                            <img class="ourThanks__thanksgiven" src="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-233x330.png" data-full="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-724x1024.png" alt="Грамота ООО ЧОП Форпост-Север от начальника ОВД по району Матушкино">
+                        </div>
+                        <div class="licences__caption">Лицензия ФСБ на работу со сведениями, составляющими государственную тайну</div>
+                    </div>
+                    <div class="licences__container">
+                        <div class="ourThanks__slide">
+                            <img class="ourThanks__thanksgiven" src="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-233x330.png" data-full="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-724x1024.png" alt="Грамота ООО ЧОП Форпост-Север от начальника ОВД по району Матушкино">
+                        </div>
+                        <div class="licences__caption">Лицензия ФСБ на работу со сведениями, составляющими государственную тайну</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ourClients ourClients--pos">
+            <div class="wrapper">
+                <div class="row"><h2
+                        class="section-header section-header_have-bord section-header_have-logo section-header_text-centered section-header--pos">
+                    Наши клиенты</h2>
+                    <div class="ourClients__slider slick-initialized slick-slider">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button"
+                                style="display: block;">Previous
+                        </button>
+                        <div class="slick-list draggable">
+                            <div class="slick-track"
+                                 style="opacity: 1; width: 7618px; transform: translate3d(-2930px, 0px, 0px);">
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="-4" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo01-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="-3" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo02-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="-2" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo03-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="-1" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo04-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="0"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/doza.gif"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="1"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/elvis.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="2"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/fond.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="3"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/institut-240x62.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="4"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/miee_logo.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="5"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/rezonit-240x50.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-current slick-active"
+                                     data-slick-index="6" aria-hidden="false" style="width: 293px;"
+                                     tabindex="0"><img class="ourClients__slideimg"
+                                                       src="http://forpost-sever.ru/wp-content/uploads/2017/11/stayver.png"
+                                                       alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-active" data-slick-index="7"
+                                     aria-hidden="false" style="width: 293px;" tabindex="0"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo01-240x103.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-active" data-slick-index="8"
+                                     aria-hidden="false" style="width: 293px;" tabindex="0"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo02-240x103.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-active" data-slick-index="9"
+                                     aria-hidden="false" style="width: 293px;" tabindex="0"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo03-240x103.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide" data-slick-index="10"
+                                     aria-hidden="true" style="width: 293px;" tabindex="-1"><img
+                                        class="ourClients__slideimg"
+                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo04-240x103.png"
+                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="11" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/doza.gif"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="12" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/elvis.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="13" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/fond.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="14" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/institut-240x62.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="15" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/miee_logo.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="16" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/rezonit-240x50.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="17" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/stayver.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="18" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo01-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="19" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo02-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="20" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo03-240x103.png"
+                                                        alt=""></div>
+                                <div class="ourClients__slide slick-slide slick-cloned"
+                                     data-slick-index="21" aria-hidden="true" style="width: 293px;"
+                                     tabindex="-1"><img class="ourClients__slideimg"
+                                                        src="http://forpost-sever.ru/wp-content/uploads/2017/11/logo04-240x103.png"
+                                                        alt=""></div>
+                            </div>
+                        </div>
+                        <button class="slick-next slick-arrow" aria-label="Next" type="button"
+                                style="display: block;">Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="page__footer">
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="footer__contacts">
+                        <p class="footer__text">Юридический адрес: 124527, Москва г. Зеленоград, Солнечная аллея, д.6
+                            тел:
+                            499-720-69-68</p>
+                        <p class="footer__text">Фактический адрес: 124527, Москва г. Зеленоград, Солнечная аллея, д.6
+                            тел:
+                            499-720-69-68</p>
+                        <p class="footer__text">ИНН 7735110669/КПП 773501001, Рег. номер МРП 613.977 от 21 марта
+                            2002г.</p>
+
+                    </div>
+                    <div class="footer__center-block">
+                        <div class="footer__subheader">надежное охранное предприятие</div>
+                        <div class="footer__header">форпост север</div>
+                        <div class="footer__nav footer__nav_left">
+                            <div class="footer-nav">
+                                <div class="footer-nav__title">Главное</div>
+                                <ul class="footer-nav__items">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">О нас </a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#"
+                                                                    class="footer-nav__itemlink">Благодарности</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Услуги</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Клиенты</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Новости</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__nav footer__nav_right">
+                            <div class="footer-nav">
+                                <div class="footer-nav__title">Услуги</div>
+                                <ul class="footer-nav__items">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        клубов</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        учреждений</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        объектов</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        недвижимости</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        мероприятий</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__form">
+                        <div class="miniform">
+                            <div class="miniform__header">
+                                <div class="miniform__title">Остались Вопросы?</div>
+                                <div class="miniform__subtitle">Напишите нам и наш сотрудник свяжется с Вами</div>
+                            </div>
+                            <div class="miniform__gradient"></div>
+                            <form action="/mailer.php" class="miniform__form">
+                                <input type="text" class="miniform__input" name="name" required placeholder="Ваше имя">
+                                <input class="miniform__input input__email" name="email"
+                                       data-inputmask="'alias': 'email'"
+                                       required
+                                       placeholder="E-mail">
+                                <input type="tel" class="miniform__input" name="phone"
+                                       data-inputmask="'mask': '+7 (999) 999-99-99'" required
+                                       placeholder="Номер телефона">
+                                <textarea name="order-text" class="miniform__textarea" cols="30" rows="1"
+                                          placeholder="Текст..."></textarea>
+                                <button type="button"
+                                        class="button button_small button_green button_shadowed button_centered">
+                                    отправить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal__header">
+                <a href="#" class="close" data-dismiss="modal"></a>
+                <h4 class="modal__title">Оформление заявки</h4>
+            </div>
+            <div class="modal__body">
+                <form action="/mailer.php" method="post" class="modal__form">
+                    <fieldset class="modal__fieldset">
+                        <input type="text" class="modal__input" name="name" required placeholder="Иванов Иван">
+                        <input class="modal__input input__email" name="email" data-inputmask="'alias': 'email'" required
+                               placeholder="example@mail.ru">
+                        <input type="tel" class="modal__input" name="phone"
+                               data-inputmask="'mask': '+7 (999) 999-99-99'" required
+                               placeholder="Номер телефона">
+                        <textarea name="order-text" class="modal__textarea" cols="30" rows="10"
+                                  placeholder="Sometext"></textarea>
+                    </fieldset>
+                    <fieldset class="modal__fieldset">
+
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="check" value="1" required>
+                            <span class="checkbox__ico"></span>
+                            <span class="checkbox__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="check" value="2">
+                            <span class="checkbox__ico"></span>
+                            <span class="checkbox__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="check" value="3">
+                            <span class="checkbox__ico"></span>
+                            <span class="checkbox__text">Нужно выбрать опцию</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="modal__fieldset">
+
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="radio" value="1" checked>
+                            <span class="radio__ico"></span>
+                            <span class="radio__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="radio" value="2">
+                            <span class="radio__ico"></span>
+                            <span class="radio__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="radio" value="3">
+                            <span class="radio__ico"></span>
+                            <span class="radio__text">Нужно выбрать опцию</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="modal__fieldset">
+                        <button type="button" class="button modal__button button_green button_shadowed button_centered">
+                            заказать охрану
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+<script src="./js/scripts.min.js"></script>
+</body>
+</html>
