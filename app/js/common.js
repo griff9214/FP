@@ -6,27 +6,27 @@ if (window.innerWidth > 992 && $('.aside__form').is('div.aside__form')) {
             $('.aside__form').css('width', $('.aside__form').outerWidth());
             $('.aside__form').css('left', $('.aside__form').offset().left);
             $('.aside__form').addClass('aside__form_fixed');
+            $('.aside__form').removeClass('aside__form_on-bottom');
         }
         else {
             $('.aside__form').removeClass('aside__form_fixed');
+            $('.aside__form').removeClass('aside__form_on-bottom');
             $('.aside__form').css('margin-top', 0);
         }
-
-        if ($(window).scrollTop() > $('.page__footer').offset().top - formHeight - 60) {
-            $('.aside__form > form').fadeOut();
+        //убираем фиксацию при прокрутке до футера + 2 паддинга контента страницы
+        if ($(window).scrollTop() >= $('.page__footer').offset().top - $('.form-caption').outerHeight() - parseInt($(".page-content").css("padding-top")) - parseInt($(".page-content").css("padding-bottom"))) {
+            $('.aside__form').removeClass('aside__form_fixed');
+            $('.aside__form').addClass('aside__form_on-bottom');
+            $('.aside').addClass('aside_on-bottom');
+        }
+        //гасим форму при прокрутке
+        if ($(window).scrollTop() > $('.page__footer').offset().top - formHeight - 160) {
+            $('.aside__form > form').hide();
         }
         else {
-            $('.aside__form > form').fadeIn();
+            $('.aside__form > form').show();
         }
 
-        if ($(window).scrollTop() >= $('.page__footer').offset().top - $('.form-caption').outerHeight() - 70) {
-            $('.aside__form').removeClass('aside__form_fixed');
-            $('.aside__form').css('margin-top', 'auto');
-            $('.aside').css({
-                'display': 'flex',
-                'flex-direction': 'column',
-            });
-        }
     });
 }
 //-------------------Sticky aside form ---------------//

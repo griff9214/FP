@@ -704,15 +704,6 @@ body
       border-left: 4px solid $main-color
       +sm-block
         margin-left: 0
-      //position: relative
-      //&:before
-      //  position: absolute
-      //  display: inline-block
-      //  content: ''
-      //  height: 100%
-      //  width: 4px
-      //  background: $main-color
-      //  left: -10px
   &__button
     margin-top: 36px
     +md-block
@@ -1795,6 +1786,7 @@ body
   font-family: OpenSans
   font-size: 16px
   color: #555555
+  background: url("../images/white-ornamic.png")
   article
     padding: 0 20px
     &:before
@@ -1855,14 +1847,24 @@ body
       color: #555555
   blockquote
     @extend .review__caption
-    padding-top: 15px
-    padding-bottom: 15px
+    @extend .review__text
+    padding: 15px 35px 15px 100px
+    margin: 0
     background: rgba(0,0,0,.05)
+    text-align: justify
+    &:before
+      content: ''
+      display: block
+      height: 100%
+      width: 100px
+      left: 0
+      background: url("../images/animat-lightbulb-color.gif") no-repeat center
+      background-size: contain
     &:after
       display: none
     p
-      @extend .review__text
-      margin: 0 35px
+      padding: 0
+      margin: 0
       text-align: justify
 
 //------------End of Рages styles-----------------//
@@ -1874,10 +1876,15 @@ body
   +col
   +size(4)
   +size-md(12)
+  &_on-bottom
+    display: flex
+    flex-direction: column
   &__form
     &_fixed
       position: fixed
       top: 30px
+    &_on-bottom
+      margin-top: auto !important
 
 .form-caption
   border-width: 3px
