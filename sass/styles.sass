@@ -1767,6 +1767,11 @@ body
   +col
   +size(8)
   +size-md(12)
+.main_faq
+  +col
+  +size(8)
+  +size-md(12)
+  +offset-left(2)
 .main-otz
   display: flex
   flex-wrap: wrap
@@ -1866,7 +1871,23 @@ body
       padding: 0
       margin: 0
       text-align: justify
-
+.faq-answer
+  @extend .review__caption
+  @extend .review__text
+  padding: 15px 35px 15px
+  margin: 0
+  background: rgba(0,0,0,.05)
+  text-align: justify
+  &:before
+    content: ''
+    display: block
+    height: 100%
+    width: 100px
+    left: -100px
+    background: url("../images/animat-lightbulb-color.gif") no-repeat center
+    background-size: contain
+  &:after
+    display: none
 //------------End of Рages styles-----------------//
 
 @import "_modal"
