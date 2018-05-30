@@ -76,7 +76,8 @@ gulp.task('scripts', ['common-js'], function () {
         //"./app/plugins/inputmask/inputmask/phone-codes/phone.js",
         //"./app/plugins/inputmask/inputmask/phone-codes/phone-ru.js",
         "./app/plugins/mmenu/jquery.mmenu.js",
-        "./app/plugins/bootstrap/js/bootstrap.min.js",
+        "./app/plugins/bootstrap/js/util.js",
+        "./app/plugins/bootstrap/js/modal.js",
         "./app/js/common.min.js"
     ])
         .pipe(concat('scripts.min.js'))
