@@ -60,6 +60,8 @@ body
   text-align: center
   &_shadowed
     box-shadow: 0 0 19.24px 6.76px rgba(13, 162, 126, 0.2)
+  &_anim-shadow
+    animation: shadowPulse infinite 3s
   &_centered
     margin: 0 auto
   &_green
@@ -384,7 +386,7 @@ body
       position: absolute
       height: 100%
       width: 100%
-      z-index: 2
+      //z-index: 2
   &__left-side
     +col
     +size(7)
@@ -398,11 +400,13 @@ body
       +size(12)
       +offset-right(0)
       padding-bottom: 60%
+    &_in-faq
+      +size(6)
+      +offset-right(0)
+      +sm-block
+        padding-bottom: 0
+
   &__right-side
-    //+col
-    //+size(5)
-    //align-self: flex-end
-    //position: relative
     width: 45%
     position: absolute
     bottom: 0
@@ -415,6 +419,13 @@ body
       padding-top: 105%
       +sm-block
         padding-top: 60%
+    &_in-faq
+      position: static
+      padding: 50px 0
+      &:before
+        display: none
+      +sm-block
+        text-align: center
     +md-block
       max-height: 73%
     +sm-block
@@ -1236,6 +1247,8 @@ body
       &:after
         opacity: 1
         cursor: pointer
+  &_in-faq
+    padding-bottom: 0
   &__caption
     padding: 22px 0 65px 0
     background-color: #fff
@@ -1257,6 +1270,12 @@ body
       background-size: contain
     &_on-page
       padding-bottom: 30px
+    &_in-faq
+      padding-bottom: 30px
+      &:after
+        transform: rotateZ(180deg)
+        top: -25px
+        bottom: auto
   &__firm
     font-family: OpenSansLight
     color:  #222222
@@ -1772,6 +1791,7 @@ body
   +size(8)
   +size-md(12)
   +offset-left(2)
+  +offset-left-md(0)
 .main-otz
   display: flex
   flex-wrap: wrap
@@ -1878,6 +1898,7 @@ body
   margin: 0
   background: rgba(0,0,0,.05)
   text-align: justify
+  line-height: 1.8
   &:before
     content: ''
     display: block

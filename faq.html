@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 <div class="page">
@@ -57,37 +58,13 @@
     <section class="promo-section promo-section_shadowed">
         <div class="wrapper">
             <div class="row">
-                <div class="promo-section__left-side">
-                    <span class="promo-section__sub-header promo-section__sub-header_have-bord promo-section__header--pos">
-                        охрана стоянок и парковок</span>
-                    <div class="promo-section__text">
-                        Оказываем услуги охраны промышленных объектов любого типа.
-                        Посчитайте стоимость на нашем сайте, и мы подготовим для вас
-                        индивидуальные условия сотрудничества.
-                    </div>
+                <div class="promo-section__left-side promo-section__left-side_in-faq">
+                </div>
+                <div class="promo-section__right-side promo-section__right-side_in-faq">
                     <a href="#" data-toggle="modal" data-target="#myModal"
-                       class="button promo-section__button button_green button_cont-fit">Расчитать стоимость охраны</a>
+                       class="button button_green button_cont-fit button_anim-shadow">Расчитать стоимость охраны</a>
                 </div>
-            </div>
 
-            <div id="smoke" class="smokeParallax">
-                <div data-depth="-0.8" class="smokeRightTop"></div>
-                <div data-depth="1.3" class="smokeLeftTop"></div>
-                <div data-depth="0.4" class="smokeLeftBottom"></div>
-                <div data-depth="0.5" class="smokeRightBottom"></div>
-                <div data-depth="-0.1" class="smokeCenter"></div>
-            </div>
-        </div>
-        <div class="promo-section__right-side">
-            <div id="parallxWrapper">
-                <div class="parallxBackground">
-                    <div class="parallxLayerFirst shadowed"
-                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() * 0.9 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() * 0.9 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
-                    <div class="parallxLayerSecond shadowed"
-                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
-                    <div class="parallxLayerThird shadowed"
-                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
-                </div>
             </div>
         </div>
 
@@ -105,18 +82,8 @@
                         itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
                         <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
                            class="breadcrumbs__link">
-                            <span itemprop="name">Услуги</span></a>
+                            <span itemprop="name">Консультации</span></a>
                         <meta itemprop="position" content="2"/>
-                    </li>
-                    <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
-                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
-                           class="breadcrumbs__link">
-                            <span itemprop="name">Охрана объектов</span></a>
-                        <meta itemprop="position" content="3"/>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span>Охрана складов и предприятий</span>
                     </li>
                 </ul>
             </div>
@@ -126,8 +93,9 @@
         <div class="wrapper">
             <div class="row">
                 <main class="main_faq">
-                    <div class="review">
-                        <div class="review__caption review__caption_on-page">
+                    <h1>Вопрос: сколько можно охранять объектов всего?</h1>
+                    <div class="review review_in-faq">
+                        <div class="review__caption review__caption_in-faq">
                             <div class="review__firm">Управление внутренних дел по Зеленоградсткому АО ГУ МВД России
                                 по
                                 г.Москве
@@ -137,9 +105,15 @@
                                 в охране общественного порядка в период проведения праздничных
                             </div>
                         </div>
-                        <div class="review__author">Начальник Василевский С.С.</div>
                     </div>
                     <p class="faq-answer">
+                        Охранная группа «ОберегЪ» обладает большим опытом по поддержанию безопасности на
+                        территории
+                        <a href="#">коттеджных поселков в Москве и Подмосковье</a>. Сотрудничество с нами можно начать
+                        сразу после
+                        выделения земли и начала строительных работ, чтобы наши сотрудники охраняли вначале стройку,
+                        а
+                        потом — заселенные дома.
                         Охранная группа «ОберегЪ» обладает большим опытом по поддержанию безопасности на
                         территории
                         коттеджных поселков в Москве и Подмосковье. Сотрудничество с нами можно начать сразу после
@@ -147,6 +121,81 @@
                         а
                         потом — заселенные дома.
                     </p>
+                    <!--<ul>-->
+                        <!--<div class="nav nav-tabs" id="nav-tab" role="tablist">-->
+                            <!--<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"-->
+                               <!--role="tab" aria-controls="nav-home" aria-selected="true">Home</a>-->
+                            <!--<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"-->
+                               <!--role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>-->
+                            <!--<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"-->
+                               <!--role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>-->
+                        <!--</div>-->
+                    <!--</ul>-->
+                    <!--<div class="tab-content" id="nav-tabContent">-->
+                        <!--<div class="tab-pane fade show active" id="nav-home" role="tabpanel"-->
+                             <!--aria-labelledby="nav-home-tab">-->
+                            <!--<table class="table table-hover .table-responsive-sm">-->
+                                <!--<thead>-->
+                                <!--<th scope="col"></th>-->
+                                <!--<th scope="col">без спецсредств и оружия</th>-->
+                                <!--<th scope="col">спецстредства без оружия</th>-->
+                                <!--<th scope="col">спецсредства и оружие</th>-->
+                                <!--</thead>-->
+                                <!--<tbody>-->
+                                <!--<tr>-->
+                                    <!--<td>5/2</td>-->
+                                    <!--<td>125</td>-->
+                                    <!--<td>140</td>-->
+                                    <!--<td>180</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>день/ночь</td>-->
+                                    <!--<td>140</td>-->
+                                    <!--<td>150</td>-->
+                                    <!--<td>200</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>24 часа</td>-->
+                                    <!--<td>150</td>-->
+                                    <!--<td>160</td>-->
+                                    <!--<td>210</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>сменный</td>-->
+                                    <!--<td>150</td>-->
+                                    <!--<td>170</td>-->
+                                    <!--<td>230</td>-->
+                                <!--</tr>-->
+                                <!--<tr>-->
+                                    <!--<td>вахта</td>-->
+                                    <!--<td>180</td>-->
+                                    <!--<td>190</td>-->
+                                    <!--<td>250</td>-->
+                                <!--</tr>-->
+                                <!--</tbody>-->
+                            <!--</table>-->
+                        <!--</div>-->
+                        <!--<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">-->
+                            <!--Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim-->
+                            <!--reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim-->
+                            <!--non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit-->
+                            <!--ullamco magna consequat voluptate minim amet aliquip ipsum aute laboris nisi. Labore labore-->
+                            <!--veniam irure irure ipsum pariatur mollit magna in cupidatat dolore magna irure esse tempor-->
+                            <!--ad mollit. Dolore commodo nulla minim amet ipsum officia consectetur amet ullamco voluptate-->
+                            <!--nisi commodo ea sit eu.-->
+                        <!--</div>-->
+                        <!--<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">-->
+                            <!--Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat-->
+                            <!--sunt do. Eu ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore-->
+                            <!--anim cupidatat. Deserunt officia id Lorem nostrud aute id commodo elit eiusmod enim irure-->
+                            <!--amet eiusmod qui reprehenderit nostrud tempor. Fugiat ipsum excepteur in aliqua non et quis-->
+                            <!--aliquip ad irure in labore cillum elit enim. Consequat aliquip incididunt ipsum et minim-->
+                            <!--laborum laborum laborum et cillum labore. Deserunt adipisicing cillum id nulla minim nostrud-->
+                            <!--labore eiusmod et amet. Laboris consequat consequat commodo non ut non aliquip reprehenderit-->
+                            <!--nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem aute nostrud-->
+                            <!--magna.-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </main>
             </div>
         </div>

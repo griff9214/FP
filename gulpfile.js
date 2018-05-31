@@ -78,6 +78,7 @@ gulp.task('scripts', ['common-js'], function () {
         "./app/plugins/mmenu/jquery.mmenu.js",
         "./app/plugins/bootstrap/js/util.js",
         "./app/plugins/bootstrap/js/modal.js",
+        "./app/plugins/bootstrap/js/tab.js",
         "./app/js/common.min.js"
     ])
         .pipe(concat('scripts.min.js'))
