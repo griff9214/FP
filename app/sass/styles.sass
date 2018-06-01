@@ -1,0 +1,1981 @@
+// bootsrap
+@import "../../node_modules/bootstrap/scss/functions"
+@import "../../node_modules/bootstrap/scss/variables"
+@import "../../node_modules/bootstrap/scss/mixins"
+@import "../../node_modules/bootstrap/scss/modal"
+@import "../../node_modules/bootstrap/scss/tables"
+@import "../../node_modules/bootstrap/scss/nav"
+
+
+@import "_variables"
+@import "_fonts"
+@import "_smartgrid"
+@import "__animations"
+$hamburger-layer-color: $main-color
+@import "__hamburgers"
+@import "slick"
+@import "slick-theme"
+@import "jquery.mmenu.all.css"
+
+
+
+@import "_modal"
+
++reset
+html, body
+  height: 100%
+body
+  overflow-x: hidden
+  background-color: #fff
+  z-index: -2
+
+// Block page-wrapper for mmenu& sticky footer
+.page
+  box-sizing: border-box
+  position: relative
+  min-height: 100%
+  width: 100%
+  &__footer
+    position: absolute
+    width: 100%
+    bottom: 0
+// Block page-wrapper for mmenu& sticky footer
+
+
+.wrapper
+  +wrapper
+  position: relative
+
+.row
+  +row-flex
+  &--justifySB
+    +justify-content(space-between)
+  &--justifySA
+    +justify-content(space-around)
+  &-float
+    +row-float
+.visible
+  display: block !important
+// Стилизация кнопок и элементов форм
+.button
+  font-family: OpenSansSemiBold
+  color:  #ffffff
+  font-size: 15px
+  text-transform: uppercase
+  padding: 17px 0
+  border-radius: 15px
+  text-decoration: none
+  display: block
+  transition: all 0.5s
+  width: 256px
+  text-align: center
+  &_shadowed
+    box-shadow: 0 0 19.24px 6.76px rgba(13, 162, 126, 0.2)
+  &_anim-shadow
+    animation: shadowPulse infinite 3s
+  &_centered
+    margin: 0 auto
+  &_green
+    background-color: $main-color
+    &:hover
+      background-color: #11b78f
+  &_small
+    width: 212px
+    font-size: 12px
+  &_cont-fit
+    display: inline-block
+    width: auto
+    padding-left: 20px
+    padding-right: 20px
+
+.checkbox
+  display: block
+  position: relative
+  font-family: RobotoRegular
+  color:  #222222
+  font-size: 16px
+  margin-bottom: 13px
+  &:hover &__ico
+    border: 1px solid $main-color
+    box-shadow: 0 0 5px 2px rgba(13, 162, 126, 0.2)
+  &__input
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    opacity: 0
+  &__input:checked + &__ico
+    background-color: $main-color
+    border: 1px solid $main-color
+    box-shadow: 0 0 5px 2px rgba(13, 162, 126, 0.2)
+  &__ico
+    display: inline-block
+    vertical-align: middle
+    margin-right: 6px
+    width: 14px
+    height: 14px
+    border: 1px solid #888888
+    transition: all 0.5s
+    &:hover, &:active
+      border: 1px solid $main-color
+  &:last-of-type
+    margin-bottom: 0
+.radio
+  @extend .checkbox
+  &__input
+    @extend .checkbox__input
+  &__ico
+    @extend .checkbox__ico
+    border-radius: 50%
+
+.hamburger
+  display: none
+  +sm-block
+    display: inline-block
+    float: right
+// Стилизация кнопок и элементов форм
+
+.img-popup
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.4)
+  z-index: 90
+.section-header
+  font-size: 43px
+  font-family: RobotoBold
+  color:  #222222
+  text-transform: uppercase
+  display: inline-block
+  +md-block
+    display: block
+  +xs-block
+    font-size: 35px
+  &_have-logo
+    &:before
+      content: ""
+      display: block
+      width: 70px
+      height: 43px
+      background: url("../images/title.png") no-repeat center center
+      background-size: cover
+      margin: 0 auto
+      margin-bottom: 4px
+  &_have-bord
+    &:after
+      content: ''
+      display: block
+      height: 3px
+      width: 60px
+      margin: 0 auto
+      background-color: $main-color
+      margin-top: 8px
+  &_text-centered
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    flex: 1 0 100%
+  &--pos
+    margin-bottom: 24px
+.sectionSubHeader
+  font-size: 30px
+  font-family: RobotoBold
+  color:  #222222
+  text-transform: uppercase
+  +xs-block
+    font-size: 25px
+
+.header
+  border-bottom: 1px solid #eae5e2
+  +sm-block
+    +clearfix
+  &__greenMask
+    height: 28px
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: -1
+    background: linear-gradient(45deg, #ffffff 0%,#ffffff 26%,#0da27e 26%,#0da27e 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0da27e',GradientType=1 )
+    +xs-block
+      height: 56px
+      background: linear-gradient(45deg, #ffffff 0%,#ffffff 34%,#0da27e 26%,#0da27e 100%)
+    +xxs-block
+      background: linear-gradient(45deg, #ffffff 0%,#ffffff 39%,#0da27e 26%,#0da27e 100%)
+  &-contacts
+    height: 28px
+    color: #ffffff
+    display: flex
+    justify-content: flex-end
+    +xs-block
+      height: 56px
+      flex-wrap: wrap
+    &__url
+      font-family: OpenSansRegular
+      font-size: 15px
+      color: #fff
+      text-decoration: none
+      margin-left: 25px
+      align-self: center
+      +xs-block
+        text-align: right
+        flex: 1 0 100%
+      &_phone
+        &:before
+          content: ''
+          background-image: url("../images/phone-ico.png")
+          height: 12px
+          width: 12px
+          display: inline-block
+          margin-right: 5px
+        &:hover:before
+          animation: swing 1.5s
+      &_mail
+        &:before
+          content: ''
+          background-image: url("../images/mail-ico.png")
+          height: 10px
+          width: 13px
+          display: inline-block
+          margin-right: 5px
+        &:hover:before
+          animation: swing 1.5s
+  &ContactsSocial
+    display: inline-block
+    margin-left: 38px
+    margin-right: 2px
+    align-self: center
+    +xs-block
+      display: none
+    &__yt
+      display: inline-block
+      width: 23px
+      height: 17px
+      background-image: url("../images/yt-ico.png")
+    &__fb
+      display: inline-block
+      height: 17px
+      width: 17px
+      background-image: url("../images/fb-ico.png")
+      margin-left: 7px
+    &__im
+      display: inline-block
+      background-image: url("../images/im-ico.png")
+      width: 17px
+      height: 17px
+      margin-left: 7px
+  &-nav
+    height: 56px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-right: 5px
+    +sm-block
+      height: auto
+    &.mm-menu.mm-opened
+      z-index: 1
+    &-items
+      height: 100%
+      display: flex
+      +md-block
+        width: 73%
+        justify-content: space-between
+      &__item
+        height: 100%
+        display: inline-block
+        margin-left: 35px
+        +md-block
+          margin: 0
+        +sm-block
+          height: auto
+        &_parent
+          position: relative
+          .header-nav-items__item_parent
+            padding-right: 20px
+            &:after
+              position: absolute
+              top: 47%
+              left: 86%
+          &:after
+            content: ''
+            height: 6px
+            width: 6px
+            display: inline-block
+            background: url("../images/menu-arrow.png") no-repeat
+            margin-left: 9px
+            margin-right: -4px
+            transition: all 0.3s
+            +sm-block
+              display: none
+          &:hover:after
+            transform: rotateZ(90deg)
+      &__link
+        vertical-align: middle
+        text-decoration: none
+        font-family: RobotoRegular, serif
+        color: #222222
+        font-size: 16px
+        transition: all 0.1s
+        +xxs-block
+          font-size: 14px
+        &:hover
+          color: $main-color
+          cursor: pointer
+        &:before
+          content: ''
+          display: inline-block
+          height: 100%
+          vertical-align: middle
+    &__submenu
+      display: none
+      position: absolute
+      top: 100%
+      left: 0
+      z-index: 5
+      +sm-block
+        display: block !important
+        position: static
+      @at-root
+        .header-submenu-list
+          border: 1px solid $main-color
+          border-top: 1px solid #eae5e2
+          background-color:  #ffffff
+          padding: 5px 0
+          +sm-block
+            background-color: transparent
+            border: none
+          &__item
+            box-sizing: border-box
+            padding: 10px 15px
+            &:hover
+              background-color: $main-color
+          &__item:hover > &__link
+            color: #ffffff
+          &__link
+            @extend .header-nav-items__link
+            white-space: nowrap
+            font-size: 15px
+            display: block
+          &_sub-sub
+            left: 100%
+            top: 0
+            border: 1px solid $main-color
+            border-left: none
+  &__logo
+    width: 176px
+    height: 190px
+    display: inline-block
+    position: absolute
+    top: 18px
+    left: 5px
+    background: url("../images/logo.png") no-repeat left top
+    background-size: cover
+    z-index: 3
+    +md-block
+      transform: scale(0.9)
+    +sm-block
+      top: 0
+      left: 0
+      background-size: contain
+      width: 150px
+
+    +xs-block
+      width: 110px
+      height: 120px
+
+.promo-section
+  background: url("../images/slider-fon.jpg") no-repeat left center
+  background-size: cover
+  overflow: hidden
+  position: relative
+  &_shadowed
+    &:before
+      content: ''
+      background-color: rgba(0, 0, 0, 0.4)
+      position: absolute
+      height: 100%
+      width: 100%
+      //z-index: 2
+  &__left-side
+    +col
+    +size(7)
+    +offset-right(5)
+    z-index: 2
+    +md-block
+      display: flex
+      flex-direction: column
+      justify-content: center
+    +sm-block
+      +size(12)
+      +offset-right(0)
+      padding-bottom: 60%
+    &_in-faq
+      +size(6)
+      +offset-right(0)
+      +sm-block
+        padding-bottom: 0
+
+  &__right-side
+    width: 45%
+    position: absolute
+    bottom: 0
+    left: 50%
+    max-height: 90%
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      padding-top: 105%
+      +sm-block
+        padding-top: 60%
+    &_in-faq
+      position: static
+      padding: 50px 0
+      &:before
+        display: none
+      +sm-block
+        text-align: center
+    +md-block
+      max-height: 73%
+    +sm-block
+      left: 0
+      width: 100%
+  &__header
+    font-family: RobotoBold
+    color: #ffffff
+    font-size: 65px
+    line-height: 46px
+    text-transform: uppercase
+    +lg-block
+      font-size: 55px
+    +md-block
+      font-size: 50px
+      flex: 1 0 100%
+      text-align: center
+    +sm-block
+      font-size: 45px
+    +xs-block
+      font-size: 30px
+    &--pos
+      margin-bottom: 15px
+      padding-top: 150px
+      +md-block
+        padding-top: 50px
+      +xs-block
+        padding-top: 20px
+  &__sub-header
+    font-family: RobotoRegular
+    color: #ffffff
+    font-size: 34px
+    text-transform: uppercase
+    &_have-bord
+      display: inline-block
+      &:after
+        content: ''
+        display: block
+        height: 2px
+        margin-top: 5px
+        width: 30%
+        background-color: $main-color
+        opacity: 0.8
+        transition: all 0.5s
+      &:hover:after
+        width: 100%
+    +lg-block
+      font-size: 27px
+    +md-block
+      font-size: 24px
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      +xxs-block
+        font-size: 18px
+  &__text
+    font-family: RobotoBold
+    color: #ffffff
+    font-size: 20px
+    margin-top: 20px
+    margin-bottom: 90px
+    text-align: justify
+    +sm-block
+      padding: 0 20px
+      margin-bottom: 50px
+    +xs-block
+      font-size: 18px
+    +xxs-block
+      font-size: 16px
+  &__button
+    margin-bottom: 63px
+    animation: shadowPulse infinite 3s
+    +md-block
+      align-self: center
+    +xs-block
+      margin-bottom: 40px
+  &__breadcrumbs
+    width: 100%
+    position: relative
+    z-index: 3
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0, 0.6)
+
+.animateNumbers
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  flex-wrap: nowrap
+  &--pos
+    margin-top: 43px
+    margin-bottom: 54px
+  &__promoSection
+    +sm-block
+      align-self: center
+  &Num
+    max-width: 150px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__pos
+      margin-left: 30px
+      +xs-block
+        margin-left: 20px
+    &__num
+      font-family: RobotoRegular
+      color: #ffffff
+      font-size: 36px
+      display: flex
+      align-items: center
+      justify-content: flex-start
+      text-align: center
+      +sm-block
+        font-size: 34px
+      &:before, &:after
+        content: ''
+        width: 25px
+        height: 63px
+        display: block
+        background: no-repeat
+        background-size: contain
+        +sm-block
+          width: 20px
+          height: 43px
+      &:before
+        background-image: url("../images/lavr-left.png")
+        margin-right: 7px
+        +sm-block
+          margin-right: 2px
+      &:after
+        background-image: url("../images/lavr-right.png")
+        margin-left: 7px
+        +sm-block
+          margin-left: 2px
+
+    &__caption
+      text-align: center
+      font-family: RobotoBold
+      color:  #ffffff
+      font-size: 16px
+      text-transform: uppercase
+      margin-top: 19px
+      max-width: 100%
+      +md-block
+        font-size: 14px
+      +sm-block
+        font-size: 12px
+
+#parallxWrapper
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  bottom: 0
+  z-index: 0
+
+.parallxBackground
+  height: 100%
+  position: relative
+  transform-style: preserve-3d
+
+
+.parallxLayerFirst
+  width: 61%
+  height: 100%
+  left: 0
+  bottom: 0
+  background: url("../images/man01.png") no-repeat left bottom
+  background-size: contain
+  position: absolute
+  transform: translateZ(50px)
+  transform-origin: 50% 50%
+  +sm-block
+    left: 7%
+
+
+.parallxLayerSecond
+  width: 64%
+  height: 100%
+  left: 30%
+  bottom: 0
+  background: url("../images/man02.png") no-repeat left bottom
+  background-size: contain
+  position: absolute
+  transform: translateZ(90px)
+  transform-origin: 50% 50%
+  +sm-block
+    left: 37%
+
+
+.parallxLayerThird
+  width: 61%
+  height: 100%
+  left: 60%
+  bottom: 0
+  background: url("../images/man03.png") no-repeat left bottom
+  background-size: contain
+  position: absolute
+  transform-origin: 50% 50%
+  transform: translateZ(20px)
+
+.smokeParallax
+  position: relative
+.smokeRightTop
+  position: absolute
+  width: 482px
+  height: 220px
+  background: transparent url("../images/smoke02.png") no-repeat top center
+  background-size: cover
+  bottom: -60px
+  right: 0
+  z-index: 1
+
+.smokeLeftTop
+  position: absolute
+  width: 660px
+  height: 545px
+  background: transparent url("../images/smoke02.png") no-repeat left bottom
+  background-size: cover
+  bottom: -100px
+  left: -510px
+  opacity: 0.7
+  z-index: 1
+
+.smokeLeftBottom
+  position: absolute
+  width: 645px
+  height: 345px
+  background: transparent url("../images/smoke01.png") no-repeat right top
+  background-size: cover
+  bottom: -145px
+  left: -585px
+  opacity: 0.55
+  z-index: 0
+
+.smokeRightBottom
+  position: absolute
+  width: 1427px
+  height: 772px
+  background: transparent url("../images/smoke01.png") no-repeat center center
+  background-size: cover
+  opacity: 0.65
+  bottom: -281px
+  right: -1000px
+  z-index: 0
+
+.smokeCenter
+  position: absolute
+  width: 1427px
+  height: 772px
+  background: transparent url("../images/smoke01.png") no-repeat center center
+  background-size: cover
+  opacity: 0.65
+  left: -281px
+  bottom: -321px
+  z-index: 0
+.aboutSection
+  &__inner
+    padding-top: 30px
+    padding-bottom: 27px
+  &__header, &__sub-header
+    +md-block
+      flex: 1 0 100%
+      text-align: center
+
+.aboutSection__article
+  +col-padding
+  +size(8)
+  +xs-block
+    order: 1
+    +size(12)
+.article
+  &__paragraph
+    font-family: OpenSansRegular
+    color:  #555555
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 21px
+    &:first-of-type
+      margin-top: 25px
+    &_marked
+      margin-left: -14px
+      padding-left: 10px
+      border-left: 4px solid $main-color
+      +sm-block
+        margin-left: 0
+  &__button
+    margin-top: 36px
+    +md-block
+      margin-left: auto
+      margin-right: auto
+
+
+.aboutSectionBoss
+  +col
+  +size(4)
+  margin-top: 25px
+  padding-left: #{calc(#{$atom} - #{$offset})}
+  +md-block
+    align-self: center
+    padding-left: 0
+  +xs-block
+    order: 0
+    +size(8)
+    +offset(2)
+
+  &__portrait
+    width: 100%
+    background-size: contain
+    position: relative
+    +lg-block
+      width: 95%
+    &:after
+      position: absolute
+      box-sizing: border-box
+      content: ''
+      top: 35px
+      left: 35px
+      width: 95%
+      height: 95%
+      border: 10px solid $main-color
+      z-index: -1
+      +md-block
+        top: 8%
+        left: 16%
+        width: 90%
+  &__caption
+    font-family: OpenSansRegular
+    font-size: 14px
+    color:  #222222
+    text-transform: uppercase
+    text-align: center
+    margin-top: 25px
+    span
+      display: block
+      text-transform: none
+      &:before, &:after
+        content: "-"
+
+.ourServices
+  background-color: #f5f5f5
+  &--pos
+    padding-top: 35px
+    padding-bottom: 50px
+  &__button
+    margin: 0 auto
+    margin-top: 40px
+
+
+.servicesRow
+  +size(4)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  +md-block
+    +size(12)
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: flex-start
+  &--left
+    +col-padding
+    padding-right: 0
+    margin-left: $offset_one_side
+    margin-right: 0
+    & .serviceCard:first-child
+      width: 85%
+      align-self: flex-start
+      margin-left: auto
+      & .serviceCard__container
+        position: relative
+        width: 100%
+        padding-top: 95%
+        overflow: hidden
+      & img
+        max-width: inherit
+        height: 100%
+        left: -30%
+        position: absolute
+        left: 0
+        top: 0
+        transition: all 0.8s
+    & .serviceCard:nth-child(2)
+      width: 100%
+      align-self: flex-start
+      margin-left: auto
+      & .serviceCard__container
+        position: relative
+        width: 100%
+        padding-top: 61%
+        overflow: hidden
+      & img
+        max-width: inherit
+        position: absolute
+        left: 0
+        top: 0
+        transition: all 0.8s
+  &--right
+    +col-padding
+    padding-left: 0
+    margin-right: $offset_one_side
+    margin-left: 0
+    & .serviceCard:first-child
+      width: 85%
+      align-self: flex-start
+      margin-right: auto
+      & .serviceCard__container
+        position: relative
+        width: 100%
+        padding-top: 95%
+        overflow: hidden
+      & img
+        max-width: inherit
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+        transition: all 0.8s
+    & .serviceCard:nth-child(2)
+      width: 100%
+      align-self: flex-start
+      margin-right: auto
+      & .serviceCard__container
+        position: relative
+        width: 100%
+        padding-top: 61%
+        overflow: hidden
+      & img
+        max-width: inherit
+        position: absolute
+        left: 0
+        top: 0
+        transition: all 0.8s
+  &--center
+    +col
+    +xs-block
+      margin-bottom: 12px
+    & .serviceCard
+      margin-bottom: 12px
+    & .serviceCard:last-child
+      margin-bottom: 0
+    & .serviceCard__container
+      position: relative
+      width: 100%
+      padding-top: 71%
+      overflow: hidden
+      +sm-block
+        padding-top: 80%
+    & img
+      max-width: inherit
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      transition: all 0.8s
+
+
+.serviceCard
+  position: relative
+  overflow: hidden
+  +md-block
+    +col
+    +size(6)
+  +size-xs(12)
+  &__bg
+    background-position: center center
+    background-size: cover
+    position: absolute
+    height: 100%
+    width: 100%
+    transition: all 0.5s
+  &__title
+    position: absolute
+    display: inline-block
+    font-family: OpenSansRegular
+    font-size: 27px
+    color: #ffffff
+    text-align: center
+    line-height: 31px
+    text-decoration: none
+    z-index: 2
+    +lg-block
+      font-size: 20px
+      line-height: 20px
+    +xs-block
+      font-size: 25px
+      line-height: 30px
+      padding-top: 10px
+    +xxs-block
+      font-size: 20px
+      line-height: 20px
+      padding: 0
+    &:first-letter
+      text-transform: uppercase
+    &:after
+      content: ''
+      display: block
+      width: 50px
+      height: 3px
+      background-color: $main-color
+      margin: 13px auto 0
+      +lg-block
+        margin-top: 7px
+    &--bold
+      display: block
+      font-family: OpenSansBold
+  &__linksBlock
+    position: absolute
+    left: 0
+    right: 0
+    margin: auto
+    display: flex
+    flex-direction: column
+    z-index: 2
+  &__link
+    font-family: OpenSansRegular
+    font-size: 16px
+    color: #ffffff
+    align-self: center
+    transition: all 0.4s
+    &:hover
+      color: $main-color
+    +xxs-block
+      font-size: 14px
+  &__frame
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: 15px
+    z-index: 1
+  &:hover &__container:before
+    opacity: 0.75
+  &:hover &__bg
+    transform: scale(1.1)
+  +md-block
+    &:hover &__title
+      opacity: 0
+.serviceCard__container:before
+  content: ''
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  opacity: 0.37
+  z-index: 1
+  transition: all 0.8s
+
+
+//.shadowed
+//    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5))
+//    filter: url(#drop-shadow)
+//    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"
+//    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"
+
+
+.animatedFrame
+  &__container
+    position: relative
+    height: 100%
+  &__top, &__bottom
+    position: absolute
+    height: 5px
+    width: 0
+    transition: all 0.25s
+    background-color: $main-color
+    z-index: 2
+  &__top
+    top: 0
+    right: 0
+  &__bottom
+    bottom: 0
+    left: 0
+  &__left, &__right
+    position: absolute
+    height: 0
+    width: 5px
+    background-color: $main-color
+    transition: 0.25s all 0.25s
+    z-index: 2
+  &__left
+    left: 0
+    top: 0
+  &__right
+    right: 0
+    bottom: 0
+
+.serviceCard:hover
+  .animatedFrame__top, .animatedFrame__bottom
+    width: 100%
+  .animatedFrame__left, .animatedFrame__right
+    height: 100%
+
+
+.parallax-window
+  position: relative
+  padding: 125px 0 180px
+  +xs-block
+    padding: 75px 0 130px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: rgba(0,0,0, 0.6)
+    z-index: 0
+  &__text
+    +col
+    +size(5)
+    +size-md(7)
+    +size-sm(6)
+    +size-xs(12)
+    font-family: OpenSansSemiBold
+    color: #ffffff
+    font-size: 16px
+  &__header
+    font-family: OpenSansBold
+    color: #ffffff
+    font-size: 42px
+    text-transform: uppercase
+    margin-bottom: 12px
+    +sm-block
+      font-size: 30px
+    +xs-block
+      text-align: center
+  &__subheader
+    font-size: 16px
+    +xs-block
+      text-align: center
+    +xxs-block
+      font-size: 14px
+  &__form
+    +col
+    +size(6)
+    +size-lg(7)
+    +size-md(5)
+    +size-sm(6)
+    +size-xs(12)
+    align-self: center
+    position: relative
+    margin-top: 12px
+    +md-block
+      margin-top: 0
+    +xs-block
+      max-width: 316px
+      margin: 0 auto
+      margin-top: 20px
+  &__input
+    border-radius: 15px
+    border: none
+    width: 100%
+    padding: 0 25px
+    box-sizing: border-box
+    font-family: OpenSans
+    color:  #222222
+    font-size: 20px
+    letter-spacing: 6px
+    +lg-block
+      letter-spacing: 2px
+    +md-block
+      text-align: center
+  &__button
+    border: none
+    position: absolute
+    top: 0
+    right: 0
+    +md-block
+      position: static
+      margin: 0 auto
+      margin-top: 10px
+
+.aboutUs
+  &__background
+    position: relative
+    z-index: 1
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      bottom: 0
+      right: -15px
+      width: 85px
+      height: 340px
+      background: url("../images/рация.png") center center no-repeat
+      background-size: contain
+      z-index: -1
+      transform: rotateZ(15deg)
+      +xs-block
+        display: none
+  &__icons
+    margin-top: 17px
+    justify-content: space-around
+    +col
+    +justify-content-md(center)
+  &__icon
+    +xxs-block
+      margin-top: 20px
+  &--pos
+    @extend .ourServices--pos
+    padding-top: 20px
+  &__column
+    +col
+    +size(6)
+    +size-sm(12)
+    padding-left: 22px
+.textBlock
+  display: flex
+  flex-direction: column
+  font-size: 16px
+  +xs-block
+    font-size: 14px
+  &__header
+    font-family: RobotoBold
+    color:  #222222
+    font-size: 22px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 30px
+    +xs-block
+      font-size: 20px
+    +xxs-block
+      font-size: 18px
+    &:before
+      content: ''
+      display: block
+      width: 61px
+      height: 38px
+      margin: 0 auto
+      background: url('../images/title-small.png') no-repeat center center
+      background-size: contain
+      margin-bottom: 9px
+    &--inmenu
+      color: inherit
+      margin-bottom: 0
+.someItems
+  &__item
+    font-family: OpenSansRegular
+    color:  #222222
+    display: flex
+    margin-bottom: 25px
+    &:before
+      content: ''
+      align-self: flex-start
+      flex-shrink: 0
+      width: 13px
+      height: 19px
+      background: url("../images/list-item.png") center center no-repeat
+      background-size: contain
+      margin-right: 5px
+
+.icon
+  text-align: center
+  +md-block
+    +col
+    +size(6)
+  +size-xxs(8)
+  +offset-xxs(2)
+  &__title
+    font-family: OpenSansSemiBold
+    color:  #222222
+    font-size: 16px
+    text-transform: uppercase
+    text-align: center
+    max-width: 225px
+    margin: 0 auto
+    +xs-block
+      font-size: 12px
+    +xxs-block
+      font-size: 14px
+  &__img
+    max-width: 85px
+    +xs-block
+      transform: scale(0.7)
+    +xxs-block
+      transform: scale(0.8)
+.ourReviews
+  background: url("../images/russia.png") -28% center no-repeat, url("../images/russia.png") 128% center no-repeat
+  background-size: contain, contain
+  background-color: #f5f5f5
+  +md-block
+    background-size: 50%, 50%
+    background-position: -50% center, 150% center
+  &--pos
+    @extend .ourServices--pos
+  &__slider
+    width: $atom *8
+    margin: 0 auto
+    +sm-block
+      +col
+      +size(10)
+      +offset(1)
+.review
+  padding-bottom: 40px
+  &_with-img
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      height: 72px
+      width: 72px
+      background: url(../images/slide-lupa.png) center center no-repeat
+      background-size: contain
+      border-radius: 50%
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      margin: auto
+      opacity: 0
+      transition: all ease 0.5s
+    &:hover
+      cursor: pointer
+      &:after
+        opacity: 1
+        cursor: pointer
+  &_in-faq
+    padding-bottom: 0
+  &__caption
+    padding: 22px 0 65px 0
+    background-color: #fff
+    border: 1px solid #edecec
+    border-radius: 5px
+    position: relative
+    margin-bottom: 29px
+    +sm-block
+      padding-bottom: 15px
+    &:after
+      position: absolute
+      bottom: -25px
+      left: 9%
+      content: ""
+      background: url("../images/review-corner.png") center top no-repeat
+      width: 27px
+      height: 26px
+      display: block
+      background-size: contain
+    &_on-page
+      padding-bottom: 30px
+    &_in-faq
+      padding-bottom: 30px
+      &:after
+        transform: rotateZ(180deg)
+        top: -25px
+        bottom: auto
+  &__firm
+    font-family: OpenSansLight
+    color:  #222222
+    font-size: 15px
+    padding-left: 24px
+    padding-right: 20px
+    +xs-block
+      font-size: 13px
+  &__text
+    font-family: OpenSansItalic
+    color:  #222222
+    font-size: 18px
+    display: block
+    position: relative
+    margin-top: 25px
+    margin-left: 67px
+    margin-right: 100px
+    +sm-block
+      margin-right: 50px
+    +xs-block
+      font-size: 16px
+      margin-right: 30px
+      margin-left: 20px
+    &:before, &:after
+      content: ''
+      height: 23px
+      width: 23px
+      display: inline-block
+      +xs-block
+        width: 13px
+        height: 13px
+    &:before
+      position: absolute
+      left: -30px
+      top: 0
+      background: url("../images/citation01.png") left top no-repeat
+      background-size: contain
+      +xs-block
+        left: -15px
+        top: 6px
+    &:after
+      position: absolute
+      right: -30px
+      bottom: 0
+      background: url("../images/citation02.png") left top no-repeat
+      background-size: contain
+      +xs-block
+        right: -15px
+  &__firmLogo
+    max-height: 128px
+    position: absolute
+    right: 56px
+    bottom: -73px
+    +md-block
+      right: 40px
+      max-height: 100px
+      bottom: -45px
+    +sm-block
+      position: static
+      max-height: 120px
+      display: block
+      margin: 0 auto
+      margin-top: 20px
+    +xxs-block
+      max-height: 100px
+      max-width: 320px
+    &_on-page
+      display: block
+      position: static
+      margin: 15px auto 0
+  &__author
+    font-family: OpenSansSemiBold
+    color:  #222222
+    font-size: 17px
+    margin-left: 28px
+
+.ourThanks
+  background-color: #ffffff
+  &--pos
+    @extend .ourReviews--pos
+  &__slider
+    +col
+    +size(10)
+    +offset(1)
+    text-align: center
+  &__slide
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      height: 72px
+      width: 72px
+      background: url("../images/slide-lupa.png") center center no-repeat
+      background-size: contain
+      border-radius: 50%
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      margin: auto
+      opacity: 0
+      transition: all ease 0.5s
+    &:hover
+      position: relative
+      cursor: pointer
+      &:after
+        opacity: 0.8
+  &__thanksgiven
+    display: block
+    margin: 0 auto
+    max-width: 220px
+    border: 10px solid $main-color
+    border-image: url("../images/frame.png") 10 round round
+    +xxs-block
+      max-width: 200px
+    &_increased
+      position: fixed
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      margin: auto
+      width: auto
+      max-width: 90%
+      max-height: 90%
+      z-index: 100
+      display: none
+      +xxs-block
+        max-width: 90%
+.licences
+  &__container
+    flex-basis: 33%
+  &__caption
+    margin-top: 20px
+    text-align: center
+    font-size: 14px
+    font-family: OpenSansSemiBold
+    color: #555555
+    max-width: 100%
+
+.lastNews
+  background: url("../images/moscow.png") -25% center no-repeat, url("../images/moscow.png") 127% center no-repeat
+  background-size: 35%, 35%
+  +md-block
+    background-size: 50%, 50%
+    background-position: -50% center, 150% center
+  &--pos
+    @extend .ourServices--pos
+  &__button
+    margin-top: 40px
+.news
+  +col
+  +size(4)
+  +size-md(6)
+  margin-top: 50px
+  position: relative
+  +xs-block
+    +size(10)
+    margin: 50px auto 0
+  &:after
+    content: ''
+    position: absolute
+    top: -19px
+    right: -10px
+    border: 3px solid $main-color
+    width: 88px
+    height: 100px
+    z-index: -2
+    +sm-block
+      width: 68px
+      height: 88px
+      top: -13px
+      right: -5px
+  &__imageContainer
+    width: 100%
+    padding-top: 53%
+    position: relative
+    overflow: hidden
+    //margin: 0 5px
+  &__image
+    height: 100%
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    transition: all 0.5s
+    z-index: 0
+
+  &__info
+    padding-bottom: 25px
+    border-bottom: 1px solid #f5f5f5
+    position: relative
+    +clearfix
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      height: 1px
+      width: 0%
+      bottom: -1px
+      background-color: $main-color
+      transition: all ease-in 0.5s
+  &__date
+    margin-top: -21px
+    margin-left: -4px
+    width: 70px
+    height: 80px
+    background-color: $main-color
+    color:  #ffffff
+    text-align: center
+    float: left
+    transition: all 0.5s
+  &__day
+    margin-top: 12px
+    font-family: OpenSansBold
+    font-size: 25px
+  &__month
+    font-family: OpenSansLight
+    font-size: 12px
+
+  &__title
+    margin-top: 14px
+    width: 78%
+    font-family: RobotoBold
+    color:  #222222
+    font-size: 16px
+    text-transform: uppercase
+    text-decoration: none
+    float: right
+    transition: all 0.2s
+    +lg-block
+      width: 75%
+    +xxs-block
+      width: 70%
+      font-size: 14px
+    &:hover
+      color: #555555
+  &__shortText
+    margin-top: 17px
+    font-family: OpenSansRegular
+    line-height: 22px
+    color:  #555555
+    font-size: 14px
+    padding-left: 5px
+  &__readIt
+    font-family: OpenSansLight
+    margin-top: 17px
+    color:  #222222
+    font-size: 14px
+    text-transform: uppercase
+    text-decoration: none
+    display: block
+    text-align: center
+    transition: all 0.2s
+    &:hover
+      color: #555555
+  &:hover &__info:before
+    width: 100%
+  &:hover &__date
+    box-shadow: 0 0 19.24px 6.76px rgba(13, 162, 126, 0.4)
+  &:hover &__image
+    transform: scale(1.1)
+
+.ourClients
+  background-color: #f5f5f5
+  &--pos
+    @extend .ourServices--pos
+  &__slider
+    +col
+    +size(12)
+    +xxs-block
+      +size(10)
+      +offset(1)
+  &__slide
+    height: 120px
+    text-align: center
+    &:before
+      content: ''
+      display: inline-block
+      height: 100%
+      vertical-align: middle
+  &__slideimg
+    max-width: 100%
+    max-height: 100%
+    display: inline-block !important
+    vertical-align: middle
+
+
+.footer
+  padding: 42px 0
+  background: url('../images/footer.png') center bottom no-repeat
+  background-size: cover
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0, 0.77)
+  &__contacts
+    +col
+    +size(3)
+    padding-left: 5px
+    +size-md(6)
+    +sm-block
+      +size-sm(12)
+      padding-left: 0
+    &:before
+      content: ''
+      display: block
+      margin: 0 auto
+      width: 60px
+      height: 37px
+      background-image: url("../images/title-footer.png")
+  &__text
+    font-family: OpenSansRegular
+    color:  #ffffff
+    font-size: 14px
+    color: #ffffff
+    padding-top: 25px
+  &__center-block
+    +col
+    margin-left: #{$atom}
+    +lg-block
+      +size(5)
+      margin-left: 0
+    +md-block
+      +size(6)
+      margin-left: $offset_one_side
+    +sm-block
+      +size(12)
+      order: -1
+      margin-bottom: 30px
+    &:before
+      @extend .footer__contacts:before
+  &__nav
+    width: 50%
+    float: left
+    margin-top: 26px
+    box-sizing: border-box
+    +clearfix
+    &_left
+      text-align: right
+      padding-right: 27px
+    &_right
+      text-align: left
+      padding-left: 34px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        height: 50%
+        top: 0
+        left: 0
+        bottom: 0
+        margin: auto
+        width: 2px
+        background-color: $main-color
+        opacity: 0.3
+    @at-root
+      .footer-nav
+        &__title
+          font-family: RobotoBold
+          color:  #ffffff
+          font-size: 18px
+          text-transform: uppercase
+        &__itemlink
+          font-family: RobotoRegular
+          color:  #ffffff
+          font-size: 15px
+          text-decoration: none
+          font-weight: 400
+          &:hover
+            opacity: 0.8
+        &__items
+          margin-top: 10px
+        &__item
+          padding-bottom: 7px
+  &__header
+    font-family: RobotoBold
+    color:  #ffffff
+    font-size: 46px
+    line-height: 47px
+    text-transform: uppercase
+    text-align: center
+    +lg-block
+      font-size: 40px
+  &__subheader
+    margin-top: 17px
+    font-family: RobotoBold
+    color:  #ffffff
+    font-size: 21px
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 0.3px
+    +md-block
+      font-size: 18px
+  &__form
+    +col
+    margin-top: 5px
+    margin-left: auto
+    +lg-block
+      +size(4)
+      margin-left: $offset_one_side
+    +md-block
+      +size(12)
+      order: -2
+      margin-bottom: 30px
+
+.miniform
+  background-color: #fff
+  border-radius: 2px
+  overflow: hidden
+  padding-bottom: 15px
+  max-width: 320px
+  margin-left: auto
+  +md-block
+    margin-right: auto
+    max-width: 500px
+  &__header
+    padding-top: 9px
+    background-color: $main-color
+  &__title
+    text-align: center
+    font-family: RobotoBold
+    color:  #ffffff
+    font-size: 22px
+    text-transform: uppercase
+  &__subtitle
+    font-family: RobotoRegular
+    color:  #ffffff
+    font-size: 15px
+    text-align: center
+    padding: 0 20px
+  &__gradient
+    height: 39px
+    width: 100%
+    position: relative
+    overflow: hidden
+    +md-block
+      height: 64px
+    &:before
+      content: ''
+      position: absolute
+      top: -68%
+      left: 0
+      width: 50%
+      height: 116%
+      background-color: $main-color
+      transform: skew(0deg,13deg)
+    &:after
+      content: ''
+      position: absolute
+      top: -68%
+      right: 0
+      width: 50%
+      height: 116%
+      background-color: $main-color
+      transform: skew(0deg,-13deg)
+  &__form
+    padding-top: 17px
+  &__input, &__textarea
+    display: block
+    margin: 0 auto
+    width: 80%
+    border: none
+    border-bottom: 1px solid #f0f0f0
+    font-family: OpenSansRegular
+    color:  #666666
+    font-size: 14px
+    padding-left: 7px
+    padding-bottom: 5px
+    margin-bottom: 18px
+//------------End of main page styles-----------------//
+
+//------------Рages styles-----------------//
+.breadcrumbs
+  font-family: RobotoMedium
+  font-size: 16px
+  color: #d1d1d1
+  padding: 12px 0
+  &__item
+    display: inline-block
+    margin-right: 15px
+    &:after
+      content: '>'
+      display: inline-block
+      margin-left: 15px
+    &:last-of-type
+      span
+        color: #11b78f
+      &:after
+        content: ''
+
+  &__link
+    color: #d1d1d1
+    text-decoration: none
+    transition: all 0.2s
+    &:hover
+      color: #11b78f
+
+
+.main_inside
+  +col
+  +size(8)
+  +size-md(12)
+.main_faq
+  +col
+  +size(8)
+  +size-md(12)
+  +offset-left(2)
+  +offset-left-md(0)
+.main-otz
+  display: flex
+  flex-wrap: wrap
+  margin-left: -15px
+  margin-right: -15px
+  &__container
+    +size(4)
+    box-sizing: border-box
+    margin-left: 15px
+    margin-right: 15px
+    word-wrap: break-word
+    display: flex
+    flex-direction: column
+
+.page-content
+  padding: 30px 0
+  font-family: OpenSans
+  font-size: 16px
+  color: #555555
+  background: url("../images/white-ornamic.png")
+  article
+    padding: 0 20px
+    &:before
+      content: ''
+      display: block
+      width: 61px
+      height: 38px
+      margin: 0 auto
+      background: url(../images/title-small.png) no-repeat center center
+      background-size: contain
+      margin-bottom: 9px
+
+  h1
+    font-family: RobotoBold
+    color:  #222222
+    font-size: 30px
+    margin-bottom: 34px
+  h2
+    font-family: RobotoBold
+    color:  #222222
+    font-size: 20px
+  h3
+    font-family: RobotoBold
+    color:  #222222
+    font-size: 18px
+  h4
+    font-family: RobotoBold
+    color:  #222222
+    font-size: 16px
+  img.alignleft
+    margin: 0 10px 10px 0px
+    float: left
+  p
+    margin-top: 20px
+    margin-bottom: 20px
+  strong, b
+    font-weight: 800
+  ul
+    margin: 20px 0 20px 30px
+  li
+    margin: 10px 0
+    position: relative
+    &:before
+      position: absolute
+      left: -10px
+      top: 8px
+      content: ''
+      height: 5px
+      width: 5px
+      border-radius: 50%
+      background: #11b78f
+  em
+    font-style: italic
+  a
+    color: $main-color
+    text-decoration: none
+    &:hover
+      color: #555555
+  blockquote
+    @extend .review__caption
+    @extend .review__text
+    padding: 15px 35px 15px 100px
+    margin: 0
+    background: rgba(0,0,0,.05)
+    text-align: justify
+    &:before
+      content: ''
+      display: block
+      height: 100%
+      width: 100px
+      left: 0
+      background: url("../images/animat-lightbulb-color.gif") no-repeat center
+      background-size: contain
+    &:after
+      display: none
+    p
+      padding: 0
+      margin: 0
+      text-align: justify
+.faq-answer
+  @extend .review__caption
+  @extend .review__text
+  padding: 15px 35px 15px
+  margin: 0
+  background: rgba(0,0,0,.05)
+  text-align: justify
+  line-height: 1.8
+  &:before
+    content: ''
+    display: block
+    height: 100%
+    width: 100px
+    left: -100px
+    background: url("../images/animat-lightbulb-color.gif") no-repeat center
+    background-size: contain
+  &:after
+    display: none
+//------------End of Рages styles-----------------//
+
+
+
+//------------Aside styles-----------------//
+.aside
+  +col
+  +size(4)
+  +size-md(12)
+  &_on-bottom
+    display: flex
+    flex-direction: column
+  &__form
+    &_fixed
+      position: fixed
+      top: 30px
+    &_on-bottom
+      margin-top: auto !important
+
+.form-caption
+  border-width: 3px
+  border-color: #11b78f
+  border-style: solid
+  font-family: RobotoRegular
+  color:  #222222
+  text-align: center
+  padding: 20px 40px 0
+  &__title
+    font-size: 22px
+    font-weight: 700
+    &:before
+      content: ''
+      display: block
+      width: 48px
+      height: 28px
+      margin: 0 auto
+      background: url(../images/title-small.png) no-repeat center center
+      background-size: contain
+  &__text
+    font-size: 16px
+    font-weight: 400
+    margin-top: 27px
+  &__phone
+    font-size: 24px
+    font-weight: 700
+    +md-block
+      font-size: 20px
+.aside-form
+  margin-top: 20px
+  &__input
+    @extend .modal__input
+  &__textarea
+    @extend .modal__textarea
+    height: 60px
+  &__button
+    @extend .modal__button
+    margin-top: 20px
+//------------End of Aside styles-----------------//
+

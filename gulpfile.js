@@ -7,13 +7,14 @@ const gcmq = require('gulp-group-css-media-queries');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
+const rigger = require('gulp-rigger');
 
 
 const config = {
     src: './',
     css: {
-        watch: './sass/**/*.+(sass|scss)',
-        src: './sass/styles.sass',
+        watch: './app/sass/**/*.+(sass|scss)',
+        src: './app/sass/styles.sass',
         dest: './css'
     },
     html: {
@@ -57,30 +58,12 @@ gulp.task('browserSync', function () {
         }
     });
 });
-gulp.task('common-js', function () {
-    return gulp.src([
-        './app/js/common.js',
-    ])
-        .pipe(concat('common.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./app/js'));
-});
 
-gulp.task('scripts', ['common-js'], function () {
+gulp.task('scripts', function () {
     return gulp.src([
-        "./app/js/parallax.js",
-        "./app/js/scrollparallax.js",
-        "./app/js/slick.js",
-        "./app/plugins/inputmask/jquery.inputmask.bundle.js",
-        "./app/plugins/inputmask/inputmask/bindings/inputmask.binding.js",
-        //"./app/plugins/inputmask/inputmask/phone-codes/phone.js",
-        //"./app/plugins/inputmask/inputmask/phone-codes/phone-ru.js",
-        "./app/plugins/mmenu/jquery.mmenu.js",
-        "./app/plugins/bootstrap/js/util.js",
-        "./app/plugins/bootstrap/js/modal.js",
-        "./app/plugins/bootstrap/js/tab.js",
-        "./app/js/common.min.js"
+        "./app/js/main.js"
     ])
+        .pipe(rigger())
         .pipe(concat('scripts.min.js'))
         //.pipe(uglify())
         .pipe(gulp.dest('./js'))
