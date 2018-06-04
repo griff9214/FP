@@ -1,3 +1,4 @@
+@import "_variables"
 // bootsrap
 @import "../../node_modules/bootstrap/scss/functions"
 @import "../../node_modules/bootstrap/scss/variables"
@@ -5,25 +6,23 @@
 @import "../../node_modules/bootstrap/scss/modal"
 @import "../../node_modules/bootstrap/scss/tables"
 @import "../../node_modules/bootstrap/scss/nav"
+@import "../../node_modules/bootstrap/scss/transitions"
 
-
-@import "_variables"
 @import "_fonts"
 @import "_smartgrid"
 @import "__animations"
-$hamburger-layer-color: $main-color
 @import "__hamburgers"
 @import "slick"
 @import "slick-theme"
-@import "jquery.mmenu.all.css"
-
-
+@import "../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css"
+@import "__mmenu"
 
 @import "_modal"
 
 +reset
 html, body
   height: 100%
+
 body
   overflow-x: hidden
   background-color: #fff
@@ -54,12 +53,13 @@ body
     +justify-content(space-around)
   &-float
     +row-float
+
 .visible
   display: block !important
 // Стилизация кнопок и элементов форм
 .button
   font-family: OpenSansSemiBold
-  color:  #ffffff
+  color: #ffffff
   font-size: 15px
   text-transform: uppercase
   padding: 17px 0
@@ -92,7 +92,7 @@ body
   display: block
   position: relative
   font-family: RobotoRegular
-  color:  #222222
+  color: #222222
   font-size: 16px
   margin-bottom: 13px
   &:hover &__ico
@@ -121,6 +121,7 @@ body
       border: 1px solid $main-color
   &:last-of-type
     margin-bottom: 0
+
 .radio
   @extend .checkbox
   &__input
@@ -140,12 +141,13 @@ body
   position: fixed
   width: 100%
   height: 100%
-  background-color: rgba(0,0,0,0.4)
+  background-color: rgba(0, 0, 0, 0.4)
   z-index: 90
+
 .section-header
   font-size: 43px
   font-family: RobotoBold
-  color:  #222222
+  color: #222222
   text-transform: uppercase
   display: inline-block
   +md-block
@@ -178,10 +180,11 @@ body
     flex: 1 0 100%
   &--pos
     margin-bottom: 24px
+
 .sectionSubHeader
   font-size: 30px
   font-family: RobotoBold
-  color:  #222222
+  color: #222222
   text-transform: uppercase
   +xs-block
     font-size: 25px
@@ -197,13 +200,13 @@ body
     left: 0
     width: 100%
     z-index: -1
-    background: linear-gradient(45deg, #ffffff 0%,#ffffff 26%,#0da27e 26%,#0da27e 100%)
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0da27e',GradientType=1 )
+    background: linear-gradient(45deg, #ffffff 0%, #ffffff 26%, #0da27e 26%, #0da27e 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#0da27e', GradientType=1)
     +xs-block
       height: 56px
-      background: linear-gradient(45deg, #ffffff 0%,#ffffff 34%,#0da27e 26%,#0da27e 100%)
+      background: linear-gradient(45deg, #ffffff 0%, #ffffff 34%, #0da27e 26%, #0da27e 100%)
     +xxs-block
-      background: linear-gradient(45deg, #ffffff 0%,#ffffff 39%,#0da27e 26%,#0da27e 100%)
+      background: linear-gradient(45deg, #ffffff 0%, #ffffff 39%, #0da27e 26%, #0da27e 100%)
   &-contacts
     height: 28px
     color: #ffffff
@@ -274,14 +277,16 @@ body
     margin-right: 5px
     +sm-block
       height: auto
-    &.mm-menu.mm-opened
-      z-index: 1
+      display: none
     &-items
       height: 100%
       display: flex
       +md-block
         width: 73%
         justify-content: space-between
+      +sm-block
+        display: block
+        margin: 0 !important
       &__item
         height: 100%
         display: inline-block
@@ -290,6 +295,9 @@ body
           margin: 0
         +sm-block
           height: auto
+          display: block
+          &:after
+            display: none
         &_parent
           position: relative
           .header-nav-items__item_parent
@@ -341,7 +349,7 @@ body
         .header-submenu-list
           border: 1px solid $main-color
           border-top: 1px solid #eae5e2
-          background-color:  #ffffff
+          background-color: #ffffff
           padding: 5px 0
           +sm-block
             background-color: transparent
@@ -397,7 +405,7 @@ body
       position: absolute
       height: 100%
       width: 100%
-      //z-index: 2
+  //z-index: 2
   &__left-side
     +col
     +size(7)
@@ -522,7 +530,7 @@ body
       position: absolute
       width: 100%
       height: 100%
-      background-color: rgba(0,0,0, 0.6)
+      background-color: rgba(0, 0, 0, 0.6)
 
 .animateNumbers
   display: flex
@@ -578,7 +586,7 @@ body
     &__caption
       text-align: center
       font-family: RobotoBold
-      color:  #ffffff
+      color: #ffffff
       font-size: 16px
       text-transform: uppercase
       margin-top: 19px
@@ -601,7 +609,6 @@ body
   position: relative
   transform-style: preserve-3d
 
-
 .parallxLayerFirst
   width: 61%
   height: 100%
@@ -614,7 +621,6 @@ body
   transform-origin: 50% 50%
   +sm-block
     left: 7%
-
 
 .parallxLayerSecond
   width: 64%
@@ -629,7 +635,6 @@ body
   +sm-block
     left: 37%
 
-
 .parallxLayerThird
   width: 61%
   height: 100%
@@ -643,6 +648,7 @@ body
 
 .smokeParallax
   position: relative
+
 .smokeRightTop
   position: absolute
   width: 482px
@@ -696,6 +702,7 @@ body
   left: -281px
   bottom: -321px
   z-index: 0
+
 .aboutSection
   &__inner
     padding-top: 30px
@@ -711,10 +718,11 @@ body
   +xs-block
     order: 1
     +size(12)
+
 .article
   &__paragraph
     font-family: OpenSansRegular
-    color:  #555555
+    color: #555555
     font-size: 14px
     line-height: 22px
     margin-bottom: 21px
@@ -731,7 +739,6 @@ body
     +md-block
       margin-left: auto
       margin-right: auto
-
 
 .aboutSectionBoss
   +col
@@ -769,7 +776,7 @@ body
   &__caption
     font-family: OpenSansRegular
     font-size: 14px
-    color:  #222222
+    color: #222222
     text-transform: uppercase
     text-align: center
     margin-top: 25px
@@ -787,7 +794,6 @@ body
   &__button
     margin: 0 auto
     margin-top: 40px
-
 
 .servicesRow
   +size(4)
@@ -895,7 +901,6 @@ body
       top: 0
       transition: all 0.8s
 
-
 .serviceCard
   position: relative
   overflow: hidden
@@ -978,6 +983,7 @@ body
   +md-block
     &:hover &__title
       opacity: 0
+
 .serviceCard__container:before
   content: ''
   position: absolute
@@ -988,7 +994,6 @@ body
   opacity: 0.37
   z-index: 1
   transition: all 0.8s
-
 
 //.shadowed
 //    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5))
@@ -1034,7 +1039,6 @@ body
   .animatedFrame__left, .animatedFrame__right
     height: 100%
 
-
 .parallax-window
   position: relative
   padding: 125px 0 180px
@@ -1047,7 +1051,7 @@ body
     left: 0
     height: 100%
     width: 100%
-    background-color: rgba(0,0,0, 0.6)
+    background-color: rgba(0, 0, 0, 0.6)
     z-index: 0
   &__text
     +col
@@ -1097,7 +1101,7 @@ body
     padding: 0 25px
     box-sizing: border-box
     font-family: OpenSans
-    color:  #222222
+    color: #222222
     font-size: 20px
     letter-spacing: 6px
     +lg-block
@@ -1148,6 +1152,7 @@ body
     +size(6)
     +size-sm(12)
     padding-left: 22px
+
 .textBlock
   display: flex
   flex-direction: column
@@ -1156,7 +1161,7 @@ body
     font-size: 14px
   &__header
     font-family: RobotoBold
-    color:  #222222
+    color: #222222
     font-size: 22px
     text-transform: uppercase
     text-align: center
@@ -1177,10 +1182,11 @@ body
     &--inmenu
       color: inherit
       margin-bottom: 0
+
 .someItems
   &__item
     font-family: OpenSansRegular
-    color:  #222222
+    color: #222222
     display: flex
     margin-bottom: 25px
     &:before
@@ -1202,7 +1208,7 @@ body
   +offset-xxs(2)
   &__title
     font-family: OpenSansSemiBold
-    color:  #222222
+    color: #222222
     font-size: 16px
     text-transform: uppercase
     text-align: center
@@ -1218,6 +1224,7 @@ body
       transform: scale(0.7)
     +xxs-block
       transform: scale(0.8)
+
 .ourReviews
   background: url("../images/russia.png") -28% center no-repeat, url("../images/russia.png") 128% center no-repeat
   background-size: contain, contain
@@ -1234,6 +1241,7 @@ body
       +col
       +size(10)
       +offset(1)
+
 .review
   padding-bottom: 40px
   &_with-img
@@ -1289,7 +1297,7 @@ body
         bottom: auto
   &__firm
     font-family: OpenSansLight
-    color:  #222222
+    color: #222222
     font-size: 15px
     padding-left: 24px
     padding-right: 20px
@@ -1297,7 +1305,7 @@ body
       font-size: 13px
   &__text
     font-family: OpenSansItalic
-    color:  #222222
+    color: #222222
     font-size: 18px
     display: block
     position: relative
@@ -1359,7 +1367,7 @@ body
       margin: 15px auto 0
   &__author
     font-family: OpenSansSemiBold
-    color:  #222222
+    color: #222222
     font-size: 17px
     margin-left: 28px
 
@@ -1416,6 +1424,7 @@ body
       display: none
       +xxs-block
         max-width: 90%
+
 .licences
   &__container
     flex-basis: 33%
@@ -1437,6 +1446,7 @@ body
     @extend .ourServices--pos
   &__button
     margin-top: 40px
+
 .news
   +col
   +size(4)
@@ -1465,7 +1475,7 @@ body
     padding-top: 53%
     position: relative
     overflow: hidden
-    //margin: 0 5px
+  //margin: 0 5px
   &__image
     height: 100%
     position: absolute
@@ -1497,7 +1507,7 @@ body
     width: 70px
     height: 80px
     background-color: $main-color
-    color:  #ffffff
+    color: #ffffff
     text-align: center
     float: left
     transition: all 0.5s
@@ -1513,7 +1523,7 @@ body
     margin-top: 14px
     width: 78%
     font-family: RobotoBold
-    color:  #222222
+    color: #222222
     font-size: 16px
     text-transform: uppercase
     text-decoration: none
@@ -1530,13 +1540,13 @@ body
     margin-top: 17px
     font-family: OpenSansRegular
     line-height: 22px
-    color:  #555555
+    color: #555555
     font-size: 14px
     padding-left: 5px
   &__readIt
     font-family: OpenSansLight
     margin-top: 17px
-    color:  #222222
+    color: #222222
     font-size: 14px
     text-transform: uppercase
     text-decoration: none
@@ -1576,7 +1586,6 @@ body
     display: inline-block !important
     vertical-align: middle
 
-
 .footer
   padding: 42px 0
   background: url('../images/footer.png') center bottom no-repeat
@@ -1589,7 +1598,7 @@ body
     left: 0
     width: 100%
     height: 100%
-    background: rgba(0,0,0, 0.77)
+    background: rgba(0, 0, 0, 0.77)
   &__contacts
     +col
     +size(3)
@@ -1607,7 +1616,7 @@ body
       background-image: url("../images/title-footer.png")
   &__text
     font-family: OpenSansRegular
-    color:  #ffffff
+    color: #ffffff
     font-size: 14px
     color: #ffffff
     padding-top: 25px
@@ -1654,12 +1663,12 @@ body
       .footer-nav
         &__title
           font-family: RobotoBold
-          color:  #ffffff
+          color: #ffffff
           font-size: 18px
           text-transform: uppercase
         &__itemlink
           font-family: RobotoRegular
-          color:  #ffffff
+          color: #ffffff
           font-size: 15px
           text-decoration: none
           font-weight: 400
@@ -1671,7 +1680,7 @@ body
           padding-bottom: 7px
   &__header
     font-family: RobotoBold
-    color:  #ffffff
+    color: #ffffff
     font-size: 46px
     line-height: 47px
     text-transform: uppercase
@@ -1681,7 +1690,7 @@ body
   &__subheader
     margin-top: 17px
     font-family: RobotoBold
-    color:  #ffffff
+    color: #ffffff
     font-size: 21px
     text-transform: uppercase
     text-align: center
@@ -1716,12 +1725,12 @@ body
   &__title
     text-align: center
     font-family: RobotoBold
-    color:  #ffffff
+    color: #ffffff
     font-size: 22px
     text-transform: uppercase
   &__subtitle
     font-family: RobotoRegular
-    color:  #ffffff
+    color: #ffffff
     font-size: 15px
     text-align: center
     padding: 0 20px
@@ -1740,7 +1749,7 @@ body
       width: 50%
       height: 116%
       background-color: $main-color
-      transform: skew(0deg,13deg)
+      transform: skew(0deg, 13deg)
     &:after
       content: ''
       position: absolute
@@ -1749,7 +1758,7 @@ body
       width: 50%
       height: 116%
       background-color: $main-color
-      transform: skew(0deg,-13deg)
+      transform: skew(0deg, -13deg)
   &__form
     padding-top: 17px
   &__input, &__textarea
@@ -1759,7 +1768,7 @@ body
     border: none
     border-bottom: 1px solid #f0f0f0
     font-family: OpenSansRegular
-    color:  #666666
+    color: #666666
     font-size: 14px
     padding-left: 7px
     padding-bottom: 5px
@@ -1792,17 +1801,18 @@ body
     &:hover
       color: #11b78f
 
-
 .main_inside
   +col
   +size(8)
   +size-md(12)
+
 .main_faq
   +col
   +size(8)
   +size-md(12)
   +offset-left(2)
   +offset-left-md(0)
+
 .main-otz
   display: flex
   flex-wrap: wrap
@@ -1837,20 +1847,20 @@ body
 
   h1
     font-family: RobotoBold
-    color:  #222222
+    color: #222222
     font-size: 30px
     margin-bottom: 34px
   h2
     font-family: RobotoBold
-    color:  #222222
+    color: #222222
     font-size: 20px
   h3
     font-family: RobotoBold
-    color:  #222222
+    color: #222222
     font-size: 18px
   h4
     font-family: RobotoBold
-    color:  #222222
+    color: #222222
     font-size: 16px
   img.alignleft
     margin: 0 10px 10px 0px
@@ -1886,7 +1896,7 @@ body
     @extend .review__text
     padding: 15px 35px 15px 100px
     margin: 0
-    background: rgba(0,0,0,.05)
+    background: rgba(0, 0, 0, .05)
     text-align: justify
     &:before
       content: ''
@@ -1902,12 +1912,13 @@ body
       padding: 0
       margin: 0
       text-align: justify
+
 .faq-answer
   @extend .review__caption
   @extend .review__text
   padding: 15px 35px 15px
   margin: 0
-  background: rgba(0,0,0,.05)
+  background: rgba(0, 0, 0, .05)
   text-align: justify
   line-height: 1.8
   &:before
@@ -1920,6 +1931,35 @@ body
     background-size: contain
   &:after
     display: none
+
+.price-table
+  & td:first-child
+    font-weight: bold
+    background-color: rgba($main-color, .2)
+  & th
+    font-weight: bold
+    background-color: rgba($main-color, .2)
+  & td:not(:first-child)
+    text-align: center
+  & th:not(:first-child)
+    text-align: center
+.price-tabs .nav-item.nav-link.active
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    display: block
+    left: calc(50% - 4px)
+    bottom: -4px
+    height: 8px
+    width: 8px
+    background-color: $nav-tabs-link-active-bg
+    transform: rotateZ(45deg)
+.price-tabs .nav-tabs
+  border-bottom: none
+
+.price-table thead th
+  border-top: none
 //------------End of Рages styles-----------------//
 
 
@@ -1944,7 +1984,7 @@ body
   border-color: #11b78f
   border-style: solid
   font-family: RobotoRegular
-  color:  #222222
+  color: #222222
   text-align: center
   padding: 20px 40px 0
   &__title
@@ -1967,6 +2007,7 @@ body
     font-weight: 700
     +md-block
       font-size: 20px
+
 .aside-form
   margin-top: 20px
   &__input

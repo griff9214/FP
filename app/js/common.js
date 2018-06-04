@@ -253,9 +253,9 @@ $("input").inputmask(undefined, {
 //-------------------InputMask---------------//
 
 //-------------------FormSubmit---------------//
-var onloadCallback = function() {
+var onloadCallback = function () {
     grecaptcha.render('modal_recaptcha', {
-        'sitekey' : '6Lclt0AUAAAAAD3R3YC3mvaRD8SOssmU26OYbYuL'
+        'sitekey': '6Lclt0AUAAAAAD3R3YC3mvaRD8SOssmU26OYbYuL'
     });
 };
 
@@ -322,13 +322,13 @@ $(document).ready(function () {
     // $('#menu').clone().addClass("cloned").addClass("mobile").insertBefore("#menu");
     if (window.innerWidth <= 720) {
         $('#menu').mmenu({
-            extensions: ['theme-dark', 'effect-menu-slide', 'pagedim-black'],
+            extensions: ['theme-dark', 'effect-menu-slide', 'pagedim-black', 'position-right'],
             navbar: {
                 title: '<div class="textBlock__header textBlock__header--inmenu">меню</div>'
             },
             clone: true,
             offCanvas: {
-                position: 'right'
+                pageSelector: ".page"
             }
         });
         var api = $('#menu').data('mmenu');

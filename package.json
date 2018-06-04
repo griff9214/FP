@@ -20,6 +20,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "inputmask": "^4.0.0",
+    "jquery.mmenu": "^7.0.2",
     "smart-grid": "^1.1.0"
   },
   "description": "forpost frontend",
