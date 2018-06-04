@@ -69,6 +69,8 @@ body
   transition: all 0.5s
   width: 256px
   text-align: center
+  &_squared
+    border-radius: 0px
   &_shadowed
     box-shadow: 0 0 19.24px 6.76px rgba(13, 162, 126, 0.2)
   &_anim-shadow
@@ -78,7 +80,7 @@ body
   &_green
     background-color: $main-color
     &:hover
-      background-color: #11b78f
+      background-color: lighten($main-color, 3)
   &_small
     width: 212px
     font-size: 12px
@@ -1886,7 +1888,7 @@ body
       background: #11b78f
   em
     font-style: italic
-  a
+  a:not(.button)
     color: $main-color
     text-decoration: none
     &:hover
