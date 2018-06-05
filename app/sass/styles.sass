@@ -1945,23 +1945,28 @@ body
     text-align: center
   & th:not(:first-child)
     text-align: center
-.price-tabs .nav-item.nav-link.active
-  position: relative
-  &:after
-    content: ''
-    position: absolute
-    display: block
-    left: calc(50% - 4px)
-    bottom: -4px
-    height: 8px
-    width: 8px
-    background-color: $nav-tabs-link-active-bg
-    transform: rotateZ(45deg)
+.price-tabs
+  margin: 20px 10px
+  & .nav-item.nav-link.active
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      left: calc(50% - 4px)
+      bottom: -4px
+      height: 8px
+      width: 8px
+      background-color: $nav-tabs-link-active-bg
+      transform: rotateZ(45deg)
 .price-tabs .nav-tabs
   border-bottom: none
 
 .price-table thead th
   border-top: none
+p.price-paragraph
+  font-size: .8em
+  margin: 1em 0
 //------------End of Рages styles-----------------//
 
 
