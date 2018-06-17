@@ -407,3 +407,21 @@ $(document).ready(function () {
     });
 });
 // //-------------------slick---------------//
+
+// //-------------------to top---------------//
+$(window).scroll(function () {
+    if ($(window).scrollTop() >= 200) {
+        $(".to-top").fadeIn(400);
+        //$(".to-top").animate({opacity: 1}, 500);
+    }
+    else {
+        //$(".to-top").animate({opacity: 0}, 500);
+        $(".to-top").fadeOut(400);
+    }
+});
+
+$(".to-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+});
+// //-------------------to top---------------//

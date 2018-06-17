@@ -37,7 +37,6 @@ body
   &__footer
     position: absolute
     width: 100%
-    bottom: 0
 // Block page-wrapper for mmenu& sticky footer
 
 
@@ -89,7 +88,16 @@ body
     width: auto
     padding-left: 20px
     padding-right: 20px
-
+.to-top
+  position: fixed
+  right: 7%
+  bottom: 6%
+  width: 40px
+  height: 40px
+  background: url("../images/to-top-icon.png")
+  background-size: contain
+  cursor: pointer
+  display: none
 .checkbox
   display: block
   position: relative
@@ -1926,6 +1934,9 @@ body
   background: rgba(0, 0, 0, .05)
   text-align: justify
   line-height: 1.8
+  +sm-block
+    margin-left: 0!important
+    margin-right: 0!important
   &:before
     content: ''
     display: block
@@ -1934,6 +1945,8 @@ body
     left: -100px
     background: url("../images/animat-lightbulb-color.gif") no-repeat center
     background-size: contain
+    +sm-block
+      display: none
   &:after
     display: none
 
