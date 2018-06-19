@@ -12,8 +12,6 @@
 @import "_smartgrid"
 @import "__animations"
 @import "__hamburgers"
-@import "slick"
-@import "slick-theme"
 @import "../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css"
 @import "__mmenu"
 
@@ -1815,6 +1813,10 @@ body
   +col
   +size(8)
   +size-md(12)
+  &-8
+    +size(10)
+    +offset-left(1)
+    +offset-left-md(0)
 
 .main_faq
   +col
@@ -2043,3 +2045,5 @@ p.price-paragraph
     margin-top: 20px
 //------------End of Aside styles-----------------//
 
+@import "slick"
+@import "slick-theme"
