@@ -9,4 +9,5 @@
 //= ../../node_modules/bootstrap/js/dist/modal.js
 //= ../../node_modules/bootstrap/js/dist/tab.js
 //= ../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.js
+//= ../../node_modules/select2/dist/js/select2.js
 //= ../js/common.js
