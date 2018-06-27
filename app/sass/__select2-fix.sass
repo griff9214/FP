@@ -1,5 +1,29 @@
 .select2-container--classic .select2-results__option--highlighted[aria-selected]
   background-color: rgba($main-color, 0.5)
   color: white
-.select2-selection__arrow b
-  transition: all 0.5s ease
+.select2-selection__arrow
+  b
+    display: none
+  &:after
+    border-bottom: 2px solid rgba($main-color, 0.7)
+    border-right: 2px solid rgba($main-color, 0.7)
+    content: ''
+    display: block
+    height: 5px
+    margin-top: -4px
+    pointer-events: none
+    position: absolute
+    right: 12px
+    top: 50%
+    transform-origin: 66% 66%
+    transform: rotate(45deg)
+    transition: all 0.15s ease-in-out
+    width: 5px
+.select2-container--open
+  .select2-selection__arrow
+    &:after
+      transform: rotateZ(225deg)
+    transition: all 0.5s ease
+.select2-container--classic .select2-selection--single .select2-selection__arrow
+    background: transparent
+    border: none
