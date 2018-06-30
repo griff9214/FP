@@ -1,4 +1,9 @@
 @import "_variables"
+
+//nice select
+@import "../../node_modules/jquery-nice-select/scss/nice-select"
+@import "_nice-select-fix"
+
 // bootsrap
 @import "../../node_modules/bootstrap/scss/functions"
 @import "../../node_modules/bootstrap/scss/variables"
@@ -7,10 +12,6 @@
 @import "../../node_modules/bootstrap/scss/tables"
 @import "../../node_modules/bootstrap/scss/nav"
 @import "../../node_modules/bootstrap/scss/transitions"
-
-//select2 for custom select-box
-@import "../../node_modules/select2/src/scss/core"
-@import "__select2-fix"
 
 @import "_fonts"
 @import "_smartgrid"
@@ -1014,7 +1015,6 @@ body
 //    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"
 //    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')"
 
-
 .animatedFrame
   &__container
     position: relative
@@ -1887,7 +1887,7 @@ body
     margin-bottom: 20px
   strong, b
     font-weight: 800
-  ul
+  ul:not(.nice-select>)
     margin: 20px 0 20px 30px
   li
     margin: 10px 0
@@ -2049,6 +2049,11 @@ p.price-paragraph
     @extend .modal__button
     margin-top: 20px
 //------------End of Aside styles-----------------//
+
+
+//calc
+.calc__select
+  +size(6)
 
 @import "slick"
 @import "slick-theme"

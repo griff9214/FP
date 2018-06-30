@@ -294,12 +294,15 @@
                                 различные сигнализации</p>
                         </div>
                     </div>
-                    <select class="js-example-basic-single" name="object-type">
+                    <select class="calc__select" name="object-type">
                         <option value="1">Предприятие</option>
                         <option value="2">Частный объект</option>
                         <option value="3">Коттеджный поселок</option>
                         <option value="3">Медицинское учреждение</option>
                     </select>
+                    <input type="tel" class="modal__input masked_phone" name="phone"
+                           required data-inputmask="'mask': '+7 (999) 999-99-99'"
+                           placeholder="Номер телефона">
                 </main>
             </div>
         </div>
@@ -406,8 +409,8 @@
                         <input type="text" class="modal__input" name="name" required placeholder="Иванов Иван">
                         <input class="modal__input input__email" name="email" data-inputmask="'alias': 'email'" required
                                placeholder="example@mail.ru">
-                        <input type="tel" class="modal__input" name="phone"
-                               data-inputmask="'mask': '+7 (999) 999-99-99'" required
+                        <input type="tel" class="modal__input masked_phone" name="phone"
+                                required data-inputmask="'mask': '+7 (999) 999-99-99'"
                                placeholder="Номер телефона">
                         <textarea name="order-text" class="modal__textarea" cols="30" rows="10"
                                   placeholder="Sometext"></textarea>
@@ -464,13 +467,8 @@
 <script src="./js/scripts.min.js"></script>
 <script>
     $(document).ready(function () {
-        $('.js-example-basic-single').select2({
-            placeholder: "Не выбрано",
-            minimumResultsForSearch: 1 / 0,
-            theme: 'classic'
-        })
+        $('.calc__select').niceSelect();
     });
 </script>
-
 </body>
 </html>

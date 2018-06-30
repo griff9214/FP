@@ -45,7 +45,7 @@ gulp.task('sass', function () {
         }));
 });
 
-gulp.task('watch', ['browserSync', 'sass'], function () {
+gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
     gulp.watch(config.src + config.html.src, browserSync.reload);
     gulp.watch(config.src + config.css.watch, ['sass']);
     gulp.watch(config.src + config.js.watch, ['scripts']);

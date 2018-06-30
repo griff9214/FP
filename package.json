@@ -8,7 +8,7 @@
   "author": "griff@list.ru",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.5",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "^3.9.3",
@@ -20,8 +20,8 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "inputmask": "^4.0.0",
-    "jquery.mmenu": "^7.0.2",
-    "select2": "^4.0.6-rc.1",
+    "jquery-nice-select": "^1.1.0",
+    "jquery.mmenu": "^7.0.5",
     "smart-grid": "^1.1.0"
   },
   "description": "forpost frontend",

@@ -3,20 +3,31 @@ $hamburger-layer-color: $main-color
 
 //--bootstrap variables
 $table-border-width: 1px
-$table-hover-bg: rgba($main-color,.2)
-
+$table-hover-bg: rgba($main-color, .2)
 $nav-tabs-border-width: 1px
 $nav-tabs-border-color: $main-color
 $nav-tabs-border-radius: 0px
 $nav-tabs-link-active-bg: $main-color
 $nav-link-padding-x: 1.5rem
 $nav-tabs-link-hover-border-color: rgba($main-color, .2)
-
 $transition-fade: opacity .3s linear
 
+
+//form styling
+$input-border-color: lighten($main-color, 10%)
+$input-hover-border-color: darken($main-color, 20%)
+$input-border-radius: 5px
+
+
 //select2 fix
-$focus-border-color: $main-color
-$container-focus-border-color: $main-color
-//$container-focus-border-color: rgba($main-color, 0.7)
-//$focus-border-color: rgba($main-color, 0.7)
-$container-height: 150px
+$input-height: 45px
+$gray: $main-color
+$gray_lighter: rgba($main-color, 0.2)
+$gray_light: $input-border-color
+$gray_dark: $input-hover-border-color
+$input_border_radius: $input-border-radius
+
+//modal form elements
+$modal-input-height: 45px
+$modal-input-border-radius: $input-border-radius
+$modal-input-border-color: $input-border-color
