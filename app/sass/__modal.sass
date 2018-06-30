@@ -19,16 +19,14 @@
     &_antigate
       text-align: center
   &__input, &__textarea
+    @include form-font
     display: block
     width: calc(100% - 40px)
     padding: 0 20px
     border-radius: $modal-input-border-radius
     border: 1px solid $modal-input-border-color
-    font-family: OpenSansItalic
-    color:  #6b6b6b
-    font-size: 16px
     &:hover, &:active
-      border: 1px solid $input-hover-border-color
+      border: 1px solid $modal-input-hover-border-color
   &__input
     height: $modal-input-height
     margin-bottom: 13px

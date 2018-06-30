@@ -1,4 +1,5 @@
 @import "_variables"
+@import "_mixins"
 
 //nice select
 @import "../../node_modules/jquery-nice-select/scss/nice-select"
@@ -18,8 +19,8 @@
 @import "__animations"
 @import "__hamburgers"
 @import "../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css"
+@import "_nouislider"
 @import "__mmenu"
-
 
 @import "_modal"
 
@@ -43,7 +44,6 @@ body
     width: 100%
 // Block page-wrapper for mmenu& sticky footer
 
-
 .wrapper
   +wrapper
   position: relative
@@ -59,6 +59,7 @@ body
 
 .visible
   display: block !important
+
 // Стилизация кнопок и элементов форм
 .button
   font-family: OpenSansSemiBold
@@ -92,6 +93,7 @@ body
     width: auto
     padding-left: 20px
     padding-right: 20px
+
 .to-top
   position: fixed
   right: 7%
@@ -102,6 +104,7 @@ body
   background-size: contain
   cursor: pointer
   display: none
+
 .checkbox
   display: block
   position: relative
@@ -143,13 +146,28 @@ body
   &__ico
     @extend .checkbox__ico
     border-radius: 50%
+// Стилизация кнопок и элементов форм
+
+// классы для валидатора форм
+.masked-input
+  &-completed
+    box-shadow: 0 0 10px 3px rgba($main-color, 0.5)
+    &_in-parallax
+      box-shadow: inset 0 0 19.24px 6.76px rgba($main-color, 0.5)
+  &-uncompleted
+    box-shadow: 0 0 10px 3px rgba(255, 107, 78, 0.5)
+    border-color: rgba(255, 107, 78, 0.5)
+    &_in-parallax
+      border-color: rgba(255, 107, 78, 0.5)
+      box-shadow: inset 0 0 19.24px 6.76px rgba(255, 107, 78, 0.5)
+
+// классы для валидатора форм
 
 .hamburger
   display: none
   +sm-block
     display: inline-block
     float: right
-// Стилизация кнопок и элементов форм
 
 .img-popup
   position: fixed
@@ -1908,7 +1926,7 @@ body
     text-decoration: none
     &:hover
       color: #555555
-  a.button
+  .button
     margin-top: 20px
     margin-bottom: 20px
   blockquote
@@ -1942,8 +1960,8 @@ body
   text-align: justify
   line-height: 1.8
   +sm-block
-    margin-left: 0!important
-    margin-right: 0!important
+    margin-left: 0 !important
+    margin-right: 0 !important
   &:before
     content: ''
     display: block
@@ -1968,6 +1986,7 @@ body
     text-align: center
   & th:not(:first-child)
     text-align: center
+
 .price-tabs
   margin: 20px 10px
   & .nav-item.nav-link.active
@@ -1982,11 +2001,13 @@ body
       width: 8px
       background-color: $nav-tabs-link-active-bg
       transform: rotateZ(45deg)
+
 .price-tabs .nav-tabs
   border-bottom: none
 
 .price-table thead th
   border-top: none
+
 p.price-paragraph
   font-size: .8em
   margin: 1em 0
@@ -2057,3 +2078,46 @@ p.price-paragraph
 
 @import "slick"
 @import "slick-theme"
+
+.calc-order
+  display: flex
+  flex-wrap: wrap
+  &__select
+    +col
+    +size(4)
+    +size-sm(12)
+    +sm-block
+      margin-bottom: 20px
+  &__range-container
+    +col
+    +size(8)
+    +size-sm(12)
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+  &__range
+    +size(10)
+  &__range-input
+    width: 27px
+    margin-bottom: 0 !important
+  &__email, &__phone
+    +col
+    +size(4)
+    +size-xs(12)
+    +xs-block
+      margin-bottom: 20px
+    align-self: center
+    margin-bottom: 0
+  &__button
+    +col
+    +size(4)
+    +size-xs(12)
+    +xs-block
+      max-width: 256px
+      margin: 0 auto
+    margin-top: 0 !important
+    margin-bottom: 0 !important
+    align-self: stretch
+.noUi-pips
+  +xs-block
+    display: none

@@ -16,4 +16,5 @@
 //= ../../node_modules/bootstrap/js/dist/tab.js
 //= ../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.js
 //= ../../node_modules/jquery-nice-select/js/jquery.nice-select.js
+//= ../../node_modules/nouislider/distribute/nouislider.min.js
 //= ../js/common.js

@@ -236,17 +236,21 @@ $("input").inputmask(undefined, {
     oncomplete: function () {
         $(this).data('completed', true);
         if ($(this).hasClass('parallax-window__input') == true) {
-            $(this).css('box-shadow', ' inset 0 0 19.24px 6.76px rgba(13, 162, 126, 0.5)');
+            $(this).removeClass("masked-input-uncompleted_in-parallax");
+            $(this).toggleClass("masked-input-completed_in-parallax");
         } else {
-            $(this).css('box-shadow', '0 0 10px 3px rgba(13, 162, 126, 0.5)');
+            $(this).removeClass("masked-input-uncompleted");
+            $(this).toggleClass("masked-input-completed");
         }
     },
     onincomplete: function () {
         $(this).data('completed', false);
         if ($(this).hasClass('parallax-window__input') == true) {
-            $(this).css('box-shadow', 'inset 0 0 19.24px 6.76px rgba(255, 107, 78, 0.5)');
+            $(this).removeClass("masked-input-completed_in-parallax");
+            $(this).toggleClass("masked-input-uncompleted_in-parallax");
         } else {
-            $(this).css('box-shadow', ' 0 0 10px 3px rgba(255, 107, 78, 0.5)');
+            $(this).removeClass("masked-input-completed");
+            $(this).toggleClass("masked-input-uncompleted");
         }
     }
 });
@@ -266,11 +270,13 @@ $('form button').click(function (event) {
             var data = $(element).data();
             if (data.inputmask && !data.completed) {
                 valid = false;
-                $(element).css('box-shadow', ' 0 0 10px 3px rgba(255, 107, 78, 0.5)');
+                $(this).removeClass("masked-input-completed");
+                $(element).toggleClass("masked-input-uncompleted");
             }
             else if ($(element)['0'].required && $(element).val().length == 0) {
                 valid = false;
-                $(element).css('box-shadow', ' 0 0 10px 3px rgba(255, 107, 78, 0.5)');
+                $(this).removeClass("masked-input-completed");
+                $(element).toggleClass("masked-input-uncompleted");
             }
         }
     );
