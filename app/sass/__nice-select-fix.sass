@@ -1,7 +1,11 @@
 .nice-select
   @include form-font
   box-sizing: content-box
+  .current
+    display: block
+    overflow: hidden
+  .list
+    left: 0
+    right: 0
   &:hover
     border-color: $input-hover-border-color
-  .list
-    width: 100%

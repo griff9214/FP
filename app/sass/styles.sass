@@ -2082,24 +2082,40 @@ p.price-paragraph
 .calc-order
   display: flex
   flex-wrap: wrap
-  &__select
+  &__select-container
     +col
     +size(4)
     +size-sm(12)
     +sm-block
       margin-bottom: 20px
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 20px
+  &__select
+    flex-basis: 100%
+
   &__range-container
     +col
     +size(8)
     +size-sm(12)
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     margin-bottom: 20px
   &__range
     +size(10)
+    +sm-block
+      margin-left: 10px
+    +xs-block
+    align-self: center
+
   &__range-input
     width: 27px
     margin-bottom: 0 !important
+  &__range-caption, &__select-caption
+    flex-basis: 100%
+    @include form-font
+    margin-bottom: 10px
   &__email, &__phone
     +col
     +size(4)
