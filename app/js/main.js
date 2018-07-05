@@ -6,7 +6,7 @@
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.js
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions.js
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.extensions.js
-//= ../../node_modules/inputmask/dist/inputmask/inputmask.phone.extensions.js
+//##= ../../node_modules/inputmask/dist/inputmask/inputmask.phone.extensions.js
 //= ../../node_modules/inputmask/dist/inputmask/jquery.inputmask.js
 
 //##= ../../node_modules/inputmask/dist/inputmask/phone-codes/phone.js
@@ -17,4 +17,5 @@
 //= ../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.js
 //= ../../node_modules/jquery-nice-select/js/jquery.nice-select.js
 //= ../../node_modules/nouislider/distribute/nouislider.min.js
+//= ../../node_modules/smooth-scroll/dist/smooth-scroll.min.js
 //= ../js/common.js
