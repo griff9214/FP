@@ -6,7 +6,7 @@
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.js
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.numeric.extensions.js
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.extensions.js
-//= ../../node_modules/inputmask/dist/inputmask/inputmask.phone.extensions.js
+//##= ../../node_modules/inputmask/dist/inputmask/inputmask.phone.extensions.js
 //= ../../node_modules/inputmask/dist/inputmask/jquery.inputmask.js
 
 //##= ../../node_modules/inputmask/dist/inputmask/phone-codes/phone.js

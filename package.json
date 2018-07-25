@@ -23,7 +23,8 @@
     "jquery-nice-select": "^1.1.0",
     "jquery.mmenu": "^7.0.5",
     "nouislider": "^11.1.0",
-    "smart-grid": "^1.1.0"
+    "smart-grid": "^1.1.0",
+    "smooth-scroll": "^14.2.0"
   },
   "description": "forpost frontend",
   "devDependencies": {
