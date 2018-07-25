@@ -17,4 +17,5 @@
 //= ../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.js
 //= ../../node_modules/jquery-nice-select/js/jquery.nice-select.js
 //= ../../node_modules/nouislider/distribute/nouislider.min.js
+//= ../../node_modules/smooth-scroll/dist/smooth-scroll.min.js
 //= ../js/common.js

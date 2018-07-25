@@ -508,7 +508,7 @@ body
   &__sub-header
     font-family: RobotoRegular
     color: #ffffff
-    font-size: 34px
+    font-size: 30px
     text-transform: uppercase
     &_have-bord
       display: inline-block
@@ -533,9 +533,9 @@ body
       +xxs-block
         font-size: 18px
   &__text
-    font-family: RobotoBold
+    font-family: RobotoRegular
     color: #ffffff
-    font-size: 20px
+    font-size: 18px
     margin-top: 20px
     margin-bottom: 90px
     text-align: justify
@@ -1883,12 +1883,14 @@ body
   h1
     font-family: RobotoBold
     color: #222222
-    font-size: 30px
+    font-size: 36px
+    line-height: 40px
     margin-bottom: 34px
   h2
     font-family: RobotoBold
     color: #222222
-    font-size: 20px
+    font-size: 26px
+    line-height: 30px
   h3
     font-family: RobotoBold
     color: #222222
@@ -1905,7 +1907,7 @@ body
     margin-bottom: 20px
   strong, b
     font-weight: 800
-  ul:not(.nice-select>)
+  ul:not(.list)
     margin: 20px 0 20px 30px
   li
     margin: 10px 0
@@ -1913,7 +1915,7 @@ body
     &:before
       position: absolute
       left: -10px
-      top: 8px
+      top: 12px
       content: ''
       height: 5px
       width: 5px
@@ -1950,6 +1952,46 @@ body
       padding: 0
       margin: 0
       text-align: justify
+    table
+      td:first-child
+        font-weight: bold
+        background-color: rgba($main-color, .2)
+      th
+        font-weight: bold
+        background-color: rgba($main-color, .2)
+      td:not(:first-child)
+        text-align: center
+      th:not(:first-child)
+        text-align: center
+
+.main_faq
+  +col
+  +size(8)
+  +size-md(12)
+  +offset-left(2)
+  +offset-left-md(0)
+
+.main-otz
+  display: flex
+  flex-wrap: wrap
+  margin-left: -15px
+  margin-right: -15px
+  &__container
+    +size(4)
+    box-sizing: border-box
+    margin-left: 15px
+    margin-right: 15px
+    word-wrap: break-word
+    display: flex
+    flex-direction: column
+
+.page-content
+  padding: 30px 0
+  font-family: OpenSans
+  font-size: 20px
+  line-height: 27px
+  color: #555555
+  background: url("../images/white-ornamic.png")
 
 .faq-answer
   @extend .review__caption
@@ -2056,6 +2098,7 @@ p.price-paragraph
   &__phone
     font-size: 24px
     font-weight: 700
+    margin: 20px 0
     +md-block
       font-size: 20px
 
@@ -2134,6 +2177,6 @@ p.price-paragraph
     margin-top: 0 !important
     margin-bottom: 0 !important
     align-self: stretch
-.noUi-pips
-  +xs-block
-    display: none
+//.noUi-pips
+//  +xs-block
+//    display: none

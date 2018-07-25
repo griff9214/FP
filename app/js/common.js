@@ -303,7 +303,6 @@ $('form button').click(function (event) {
 
     event.preventDefault();
 });
-
 //-------------------FormSubmit---------------//
 
 //-------------------Equivalent height---------------//
@@ -330,14 +329,21 @@ $(document).ready(function () {
         $('#menu').mmenu({
             extensions: ['theme-dark', 'effect-menu-slide', 'pagedim-black', 'position-right'],
             navbar: {
-                title: '<div class="textBlock__header textBlock__header--inmenu">меню</div>'
+                title: '<div class="textBlock__header textBlock__header--inmenu">Меню</div>'
             },
-            clone: true,
+            clone: false,
             offCanvas: {
-                pageSelector: ".page"
+                // menuInsertMethod: "appendTo",
+                // menuInsertSelector: "body > .page",
+                // pageSelector: "body > .page"
             }
         });
+        $('#myModal').appendTo( $('body') );
         var api = $('#menu').data('mmenu');
+        $('.hamburger').click(function (event) {
+            api.openPanel( $("#menu") );
+            event.preventDefault();
+        });
         api.bind('open:finish', function () {
             $('.hamburger').addClass('is-active');
         }).bind('close:finish', function () {
@@ -418,10 +424,8 @@ $(document).ready(function () {
 $(window).scroll(function () {
     if ($(window).scrollTop() >= 200) {
         $(".to-top").fadeIn(400);
-        //$(".to-top").animate({opacity: 1}, 500);
     }
     else {
-        //$(".to-top").animate({opacity: 0}, 500);
         $(".to-top").fadeOut(400);
     }
 });
@@ -431,3 +435,16 @@ $(".to-top").click(function() {
     return false;
 });
 // //-------------------to top---------------//
+
+// //-------------------Smooth scroll---------------//
+// $("#menu a").click(function (event) {
+//     var api = $('#menu').data('mmenu');
+//     api.closePanel( $("#menu") );
+// });
+
+var scroll = new SmoothScroll('a[href*="#"]',{
+    speed: 1000,
+    easing: 'easeInOut',
+    //emitEvents: true
+});
+// //-------------------Smooth scroll---------------//
