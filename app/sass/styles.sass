@@ -164,7 +164,7 @@ body
 
 // классы для валидатора форм
 
-.hamburger
+header .hamburger
   display: none
   +sm-block
     display: inline-block
@@ -2089,7 +2089,6 @@ p.price-paragraph
 //calc
 .calc__select
   +size(6)
-
 @import "slick"
 @import "slick-theme"
 
@@ -2152,3 +2151,38 @@ p.price-paragraph
 //.noUi-pips
 //  +xs-block
 //    display: none
+
+.vacancy
+  &.active
+    background-color: #fff
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2)
+  &__header
+    display: flex
+    flex-direction: row
+    height: 65px
+    align-items: center
+    justify-content: space-around
+    &:hover
+      box-shadow: 0 5px 10px 0px rgba(0,0,0,0.15)
+      background-color: rgba($main-color, .2)
+      cursor: pointer
+  &__body
+    display: none
+    +col
+  &__header-text
+    //display: inline-block
+    //vertical-align: middle
+  &__header-icon
+    line-height: 0px
+  &__part
+    display: flex
+    flex-direction: row
+    border-top: 1px solid $input-border-color
+    &:first-child
+      border: none
+      margin-top: 20px
+  &__left, &__right
+    +col
+    +size(6)
+    ul
+      margin: 0

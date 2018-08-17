@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="header__greenMask"></div>
+        <div class="wrapper">
+            <div class="header__contacts header-contacts">
+                <a href="tel:+74997206968" class="header-contacts__url header-contacts__url_phone">499-720-69-68</a>
+                <a href="mailto:mail@mail.ru" class="header-contacts__url header-contacts__url_mail">email:
+                    mail@mail.ru</a>
+                <div class="headerContactsSocial">
+                    <a href="#" class="headerContactsSocial__yt"></a>
+                    <a href="#" class="headerContactsSocial__fb"></a>
+                    <a href="#" class="headerContactsSocial__im"></a>
+                </div>
+            </div>
+            <a href="#" class="header__logo"></a>
+            <nav id="menu" class="header-nav">
+                <ul class="header-nav-items">
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">О нас</a></li>
+                    <li class="header-nav-items__item header-nav-items__item_parent"><a href="#"
+                                                                                        class="header-nav-items__link header-nav-items__link_parent">Услуги</a>
+                        <ul class="header-nav__submenu header-submenu-list" style="display: none;">
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                            <li class="header-submenu-list__item"><a href="#" class="header-submenu-list__link">Услуга
+                                услуга</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Отзывы</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Благодарности</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Новости</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Клиенты</a></li>
+                    <li class="header-nav-items__item"><a href="#" class="header-nav-items__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="#menu" class="hamburger hamburger--emphatic">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            </a>
+        </div>
+    </header>
+    <section class="promo-section">
+        <div class="wrapper">
+            <div class="row">
+                <div class="promo-section__left-side">
+                    <span class="promo-section__sub-header promo-section__sub-header_have-bord promo-section__header--pos">
+                        охрана стоянок и парковок</span>
+                    <div class="promo-section__text">
+                        Оказываем услуги охраны промышленных объектов любого типа.
+                        Посчитайте стоимость на нашем сайте, и мы подготовим для вас
+                        индивидуальные условия сотрудничества.
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#myModal"
+                       class="button promo-section__button button_green button_cont-fit">Расчитать стоимость охраны</a>
+                </div>
+            </div>
+
+            <div id="smoke" class="smokeParallax">
+                <div data-depth="-0.8" class="smokeRightTop"></div>
+                <div data-depth="1.3" class="smokeLeftTop"></div>
+                <div data-depth="0.4" class="smokeLeftBottom"></div>
+                <div data-depth="0.5" class="smokeRightBottom"></div>
+                <div data-depth="-0.1" class="smokeCenter"></div>
+            </div>
+        </div>
+        <div class="promo-section__right-side">
+            <div id="parallxWrapper">
+                <div class="parallxBackground">
+                    <div class="parallxLayerFirst shadowed"
+                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() * 0.9 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() * 0.9 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <div class="parallxLayerSecond shadowed"
+                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <div class="parallxLayerThird shadowed"
+                         data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <!--<svg height="0" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<filter id="drop-shadow">-->
+                    <!--<feGaussianBlur in="SourceAlpha" stdDeviation="4"/>-->
+                    <!--<feOffset dx="12" dy="12" result="offsetblur"-->
+                    <!--data-bind="attr: { dx: - relativeMouse.x()}"/>-->
+                    <!--<feFlood flood-color="rgba(0,0,0,0.5)"/>-->
+                    <!--<feComposite in2="offsetblur" operator="in"/>-->
+                    <!--<feMerge>-->
+                    <!--<feMergeNode/>-->
+                    <!--<feMergeNode in="SourceGraphic"/>-->
+                    <!--</feMerge>-->
+                    <!--</filter>-->
+                    <!--</svg>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="promo-section__breadcrumbs">
+            <div class="wrapper">
+                <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
+                            <span itemprop="name">Главная</span></a>
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
+                            <span itemprop="name">Услуги</span></a>
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
+                            <span itemprop="name">Охрана объектов</span></a>
+                        <meta itemprop="position" content="3"/>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Охрана складов и предприятий</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="row">
+                <main class="main_inside main_inside-8">
+                    <div class="vacancies-container">
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vacancy">
+                            <div class="vacancy__header">
+                                <div class="vacancy__header-text">Охранник сети гипермаркетов строительных товаров
+                                    (Москва и Московская область)
+                                </div>
+                                <div class="vacancy__header-icon hamburger hamburger--emphatic">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="vacancy__body">
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Обязанности</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Видеонаблюдение;</li>
+                                            <li> Патруль территории объекта;</li>
+                                            <li> Контроль парковки автотранспорта;</li>
+                                            <li> Предотвращение хищений и порчи имущества;</li>
+                                            <li> Проверка чеков;</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Условия</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> График работы Вахта (7/7, 15/15, 20/10 и более длительная);</li>
+                                            <li> Оказываем содействие в получении лицензии;</li>
+                                            <li> Трудоустройство в день проведения собеседования;</li>
+                                            <li> Бесплатное проживание на объектах/общежитиях, хорошие бытовые
+                                                условия;
+                                            </li>
+                                            <li> Заработная плата без задержек, выплата 2 раза в месяц;</li>
+                                            <li> Премирование лучших сотрудников (от 1.000 до 5.000 руб.);</li>
+                                            <li> Возможность подработки.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="vacancy__part">
+                                    <div class="vacancy__left">Требования</div>
+                                    <div class="vacancy__right">
+                                        <ul>
+                                            <li> Дисциплинированность;</li>
+                                            <li> Ответственность.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <div class="page__footer">
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="footer__contacts">
+                        <p class="footer__text">Юридический адрес: 124527, Москва г. Зеленоград, Солнечная аллея, д.6
+                            тел:
+                            499-720-69-68</p>
+                        <p class="footer__text">Фактический адрес: 124527, Москва г. Зеленоград, Солнечная аллея, д.6
+                            тел:
+                            499-720-69-68</p>
+                        <p class="footer__text">ИНН 7735110669/КПП 773501001, Рег. номер МРП 613.977 от 21 марта
+                            2002г.</p>
+
+                    </div>
+                    <div class="footer__center-block">
+                        <div class="footer__subheader">надежное охранное предприятие</div>
+                        <div class="footer__header">форпост север</div>
+                        <div class="footer__nav footer__nav_left">
+                            <div class="footer-nav">
+                                <div class="footer-nav__title">Главное</div>
+                                <ul class="footer-nav__items">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">О нас </a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#"
+                                                                    class="footer-nav__itemlink">Благодарности</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Услуги</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Клиенты</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Новости</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__nav footer__nav_right">
+                            <div class="footer-nav">
+                                <div class="footer-nav__title">Услуги</div>
+                                <ul class="footer-nav__items">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        клубов</a>
+                                    </li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        учреждений</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        объектов</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        недвижимости</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__itemlink">Охрана
+                                        мероприятий</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__form">
+                        <div class="miniform">
+                            <div class="miniform__header">
+                                <div class="miniform__title">Остались Вопросы?</div>
+                                <div class="miniform__subtitle">Напишите нам и наш сотрудник свяжется с Вами</div>
+                            </div>
+                            <div class="miniform__gradient"></div>
+                            <form action="/mailer.php" class="miniform__form">
+                                <input type="text" class="miniform__input" name="name" required placeholder="Ваше имя">
+                                <input class="miniform__input input__email" name="email"
+                                       data-inputmask="'alias': 'email'"
+                                       required
+                                       placeholder="E-mail">
+                                <input type="tel" class="miniform__input" name="phone"
+                                       data-inputmask="'mask': '+7 (999) 999-99-99'" required
+                                       placeholder="Номер телефона">
+                                <textarea name="order-text" class="miniform__textarea" cols="30" rows="1"
+                                          placeholder="Текст..."></textarea>
+                                <button type="button"
+                                        class="button button_small button_green button_shadowed button_centered">
+                                    отправить
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal__header">
+                <a href="#" class="close" data-dismiss="modal"></a>
+                <h4 class="modal__title">Оформление заявки</h4>
+            </div>
+            <div class="modal__body">
+                <form action="/mailer.php" method="post" class="modal__form">
+                    <fieldset class="modal__fieldset">
+                        <input type="text" class="modal__input" name="name" required placeholder="Иванов Иван">
+                        <input class="modal__input input__email" name="email" data-inputmask="'alias': 'email'" required
+                               placeholder="example@mail.ru">
+                        <input type="tel" class="modal__input" name="phone"
+                               data-inputmask="'mask': '+7 (999) 999-99-99'" required
+                               placeholder="Номер телефона">
+                        <textarea name="order-text" class="modal__textarea" cols="30" rows="10"
+                                  placeholder="Sometext"></textarea>
+                    </fieldset>
+                    <fieldset class="modal__fieldset">
+
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="check" value="1" required>
+                            <span class="checkbox__ico"></span>
+                            <span class="checkbox__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="check" value="2">
+                            <span class="checkbox__ico"></span>
+                            <span class="checkbox__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="checkbox">
+                            <input class="checkbox__input" type="checkbox" name="check" value="3">
+                            <span class="checkbox__ico"></span>
+                            <span class="checkbox__text">Нужно выбрать опцию</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="modal__fieldset">
+
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="radio" value="1" checked>
+                            <span class="radio__ico"></span>
+                            <span class="radio__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="radio" value="2">
+                            <span class="radio__ico"></span>
+                            <span class="radio__text">Нужно выбрать опцию</span>
+                        </label>
+                        <label class="radio">
+                            <input class="radio__input" type="radio" name="radio" value="3">
+                            <span class="radio__ico"></span>
+                            <span class="radio__text">Нужно выбрать опцию</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="modal__fieldset">
+                        <button type="button" class="button modal__button button_green button_shadowed button_centered">
+                            заказать охрану
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+<script src="./js/scripts.min.js"></script>
+</body>
+</html>

@@ -339,6 +339,7 @@ $(document).ready(function () {
             }
         });
         $('#myModal').appendTo( $('body') );
+
         var api = $('#menu').data('mmenu');
         $('.hamburger').click(function (event) {
             api.openPanel( $("#menu") );
@@ -447,7 +448,7 @@ var scroll = new SmoothScroll('a[href*="#"]',{
     easing: 'easeInOut',
     //emitEvents: true
 });
-// //-------------------Smooth scroll---------------//
+//-------------------Smooth scroll---------------//
 
 //ajax-links
 $(document).ready(function () {
@@ -459,3 +460,18 @@ var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456
         window.location = Base64.decode($(this).data('link'));
     })
 }});
+
+//vacancies
+$('.vacancy__header').click(function (event) {
+    vacancy = $(this).closest('.vacancy');
+    if (!vacancy.hasClass('active')){
+        vacancy.addClass('active');
+        vacancy.find('.vacancy__header-icon').addClass('is-active');
+        vacancy.find('.vacancy__body').slideDown();
+     } else{
+        vacancy.find('.vacancy__header-icon').removeClass('is-active');
+        vacancy.find('.vacancy__body').slideUp();
+        vacancy.removeClass('active');
+    }
+    event.preventDefault();
+});
