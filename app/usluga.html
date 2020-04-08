@@ -54,7 +54,7 @@
             </a>
         </div>
     </header>
-    <section class="promo-section promo-section_shadowed">
+    <section class="promo-section">
         <div class="wrapper">
             <div class="row">
                 <div class="promo-section__left-side">
@@ -87,6 +87,19 @@
                          data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(100px) rotateY(' + relativeMouse.x() * 0.7 + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
                     <div class="parallxLayerThird shadowed"
                          data-bind="attr: { style:'-webkit-transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg);transform:perspective(1000px) translateZ(20px) rotateY(' + relativeMouse.x() + 'deg) rotateX(' + relativeMouse.y() + 'deg)' }"></div>
+                    <!--<svg height="0" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<filter id="drop-shadow">-->
+                    <!--<feGaussianBlur in="SourceAlpha" stdDeviation="4"/>-->
+                    <!--<feOffset dx="12" dy="12" result="offsetblur"-->
+                    <!--data-bind="attr: { dx: - relativeMouse.x()}"/>-->
+                    <!--<feFlood flood-color="rgba(0,0,0,0.5)"/>-->
+                    <!--<feComposite in2="offsetblur" operator="in"/>-->
+                    <!--<feMerge>-->
+                    <!--<feMergeNode/>-->
+                    <!--<feMergeNode in="SourceGraphic"/>-->
+                    <!--</feMerge>-->
+                    <!--</filter>-->
+                    <!--</svg>-->
                 </div>
             </div>
         </div>
@@ -95,20 +108,23 @@
             <div class="wrapper">
                 <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item" >
-                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#" class="breadcrumbs__link">
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
                             <span itemprop="name">Главная</span></a>
                         <meta itemprop="position" content="1"/>
                     </li>
                     <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item" >
-                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#" class="breadcrumbs__link">
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
                             <span itemprop="name">Услуги</span></a>
                         <meta itemprop="position" content="2"/>
                     </li>
                     <li itemprop="itemListElement" itemscope
-                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item" >
-                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#" class="breadcrumbs__link">
+                        itemtype="https://schema.org/ListItem" class="breadcrumbs__item">
+                        <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="#"
+                           class="breadcrumbs__link">
                             <span itemprop="name">Охрана объектов</span></a>
                         <meta itemprop="position" content="3"/>
                     </li>
@@ -122,78 +138,114 @@
     <div class="page-content">
         <div class="wrapper">
             <div class="row">
-                <main class="main-otz">
-                    <div class="main-otz__container">
-                        <div class="review" data-full="http://forpost-sever.ru/wp-content/uploads/2017/11/thanks5-724x1024.png">
-                            <div class="review__caption review__caption_on-page">
-                                <div class="review__firm">Управление внутренних дел по Зеленоградсткому АО ГУ МВД России
-                                    по
-                                    г.Москве
-                                </div>
-                                <div class="review__text">За проявленное высокое гражданское самосознание И активное
-                                    участие
-                                    в охране общественного порядка в период проведения праздничных
-                                </div>
-                                <img src="./images/rf.png" alt="" class="review__firmLogo review__firmLogo_on-page">
-                            </div>
-                            <div class="review__author">Начальник Василевский С.С.</div>
-                        </div>
-                        <div class="review">
-                            <div class="review__caption review__caption_on-page">
-                                <div class="review__firm">Управление внутренних дел по Зеленоградсткому АО ГУ МВД России
-                                    по
-                                    г.Москве
-                                </div>
-                                <div class="review__text">За проявленное высокое гражданское самосознание И активное
-                                    участие
-                                    в охране общественного порядка в период проведения праздничных
-                                    мероприятий, посвященных 70-летию Победы, на територии города
-                                    Зеленограда
-                                </div>
-                                <img src="./images/rf.png" alt="" class="review__firmLogo review__firmLogo_on-page">
-                            </div>
-                            <div class="review__author">Начальник Василевский С.С.</div>
-                        </div>
-                    </div>
-                    <div class="main-otz__container">
-                        <div class="review">
-                            <div class="review__caption review__caption_on-page">
-                                <div class="review__firm">Управление внутренних дел по Зеленоградсткому АО ГУ МВД России
-                                    по
-                                    г.Москве
-                                </div>
-                                <div class="review__text">За проявленное высокое гражданское самосознание И активное
-                                    участие
-                                    в охране общественного порядка в период проведения праздничных
-                                </div>
-                                <img src="./images/rf.png" alt="" class="review__firmLogo review__firmLogo_on-page">
-                            </div>
-                            <div class="review__author">Начальник Василевский С.С.</div>
-                        </div>
-                        <div class="review">
-                            <div class="review__caption review__caption_on-page">
-                                <div class="review__firm">Управление внутренних дел по Зеленоградсткому АО ГУ МВД России
-                                    по
-                                    г.Москве
-                                </div>
-                                <div class="review__text">За проявленное высокое гражданское самосознание И активное
-                                    участие
-                                    в охране общественного порядка в период проведения праздничных
-                                    мероприятий, посвященных 70-летию Победы, на територии города
-                                    Зеленограда участие
-                                    в охране общественного порядка в период проведения праздничных
-                                    мероприятий, посвященных 70-летию Победы, на територии города
-                                    Зеленограда
-                                </div>
-                                <img src="./images/rf.png" alt="" class="review__firmLogo review__firmLogo_on-page">
-                            </div>
-                            <div class="review__author">Начальник Василевский С.С.</div>
-                        </div>
-                    </div>
+                <main class="main_inside">
+                    <article>
+                        <h1>Охрана коттеджей и коттеджных поселков</h1>
+                        <p>Охранная группа «ОберегЪ» обладает большим опытом по поддержанию безопасности на территории
+                            коттеджных поселков в Москве и Подмосковье. Сотрудничество с нами можно начать сразу после
+                            выделения земли и начала строительных работ, чтобы наши сотрудники охраняли вначале стройку,
+                            а
+                            потом — заселенные дома.</p>
+                        <h2>При осуществлении физической охраны объектов мы обеспечим</h2>
+                        <p>Подобные объекты могут охраняться по-разному. Все зависит от площади поселка, наличия
+                            поблизости
+                            населенных пунктов, общей криминальной обстановки и топографических особенностей конкретной
+                            местности:</p>
+                        <ul>
+                            <li>пультовая и физическая охрана коттеджных поселков с выездом вооруженного наряда в случае
+                                взлома;
+                            </li>
+                            <li>применение КТС («тревожных кнопок»), эффективных при вооруженном нападении или
+                                грабеже;
+                            </li>
+                            <li>выезд групп <strong>быстрого</strong> реагирования при возникновении сложных нештатных
+                                ситуаций, угрожающих
+                                жизни, <em>здоровью и имуществу людей</em>.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>пультовая и физическая охрана коттеджных поселков с выездом вооруженного наряда в случае
+                                взлома;
+                            </li>
+                            <li>применение КТС («тревожных кнопок»), эффективных при вооруженном нападении или
+                                грабеже;
+                            </li>
+                            <li>выезд групп <strong>быстрого</strong> реагирования при возникновении сложных нештатных
+                                ситуаций, угрожающих
+                                жизни, <em>здоровью и имуществу людей</em>.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>пультовая и физическая охрана коттеджных поселков с выездом вооруженного наряда в случае
+                                взлома;
+                            </li>
+                            <li>применение КТС («тревожных кнопок»), эффективных при вооруженном нападении или
+                                грабеже;
+                            </li>
+                            <li>выезд групп <strong>быстрого</strong> реагирования при возникновении сложных нештатных
+                                ситуаций, угрожающих
+                                жизни, <em>здоровью и имуществу людей</em>.
+                            </li>
+                        </ul>
+                        <blockquote>Охранная группа «ОберегЪ» обладает большим опытом по поддержанию безопасности на
+                            территории
+                            коттеджных поселков в Москве и Подмосковье. Сотрудничество с нами можно начать сразу после
+                            выделения земли и начала строительных работ, чтобы наши сотрудники охраняли вначале стройку,
+                            а
+                            потом — заселенные дома.</blockquote>
+                        <h2>При осуществлении физической охраны объектов мы обеспечим</h2>
+                        <p>Подобные объекты могут охраняться по-разному. Все зависит от площади поселка, наличия
+                            поблизости
+                            населенных пунктов, общей криминальной обстановки и топографических особенностей конкретной
+                            местности:</p>
+                        <ul>
+                            <li>пультовая и физическая охрана коттеджных поселков с выездом вооруженного наряда в случае
+                                взлома;
+                            </li>
+                            <li>применение КТС («тревожных кнопок»), эффективных при вооруженном нападении или
+                                грабеже;
+                            </li>
+                            <li>выезд групп <strong>быстрого</strong> реагирования при возникновении сложных нештатных
+                                ситуаций, угрожающих
+                                жизни, <em>здоровью и имуществу людей</em>.
+                            </li>
+                        </ul>
+                        <h2>Задача профессиональной охраны – определить возможные риски и в</h2>
+                        <h3>Задача профессиональной охраны – определить возможные риски и в</h3>
+                        <h4>Задача профессиональной охраны – определить возможные риски и в</h4>
+                        <form class="row calc-order">
+                            <div class="calc-order__select-container">
+                                <div class="calc-order__select-caption">Тип объекта</div>
+                                <select class="calc-order__select calc__select" name="object-type">
+                                    <option value="1">Предприятие</option>
+                                    <option value="2">Объект недвижимости</option>
+                                    <option value="3">Учреждение или организация</option>
+                                    <option value="4">Мероприятие</option>
+                                </select></div>
+                            <div class="calc-order__range-container">
+                                <div class="calc-order__range-caption">Количество охранников</div>
+                                <div id="nouislider" class="calc-order__range"></div>
+                                <input name="humans-q" type="text" id="range-input"
+                                       class="calc-order__range-input modal__input"></div>
+                            <input class="calc-order__email modal__input" name="email" required=""
+                                   data-inputmask="'alias': 'email'" placeholder="E-mail"> <input type="tel"
+                                                                                                  class="calc-order__phone modal__input"
+                                                                                                  name="phone"
+                                                                                                  required=""
+                                                                                                  data-inputmask="'mask': '+7 (999) 999-99-99'"
+                                                                                                  placeholder="Номер телефона">
+                            <input type="hidden" name="post-price-calc">
+                            <button type="button"
+                                    class="button calc-order__button button_shadowed button_green button_squared button_centered">
+                                Получить расчет
+                            </button>
+                        </form>
+                    </article>
                 </main>
             </div>
         </div>
-    </div>    <div class="page__footer">
+    </div>
+    <div class="page__footer">
         <footer class="footer">
             <div class="wrapper">
                 <div class="row">
@@ -350,5 +402,40 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
 <script src="./js/scripts.min.js"></script>
+<script type="text/javascript">$(document).ready(function () {
+    $('.calc__select').niceSelect();
+    connectSlider = document.getElementById('nouislider');
+    noUiSlider.create(connectSlider, {
+        start: 0, step: 2, connect: [true, false], range: {
+            'min': 0, 'max': 10
+        }, pips: {mode: 'count', values: 5}
+    });
+    var pips = connectSlider.querySelectorAll('.noUi-value');
+
+    function clickOnPip() {
+        var value = Number(this.getAttribute('data-value'));
+        connectSlider.noUiSlider.set(value);
+    }
+
+    for (var i = 0; i < pips.length; i++) {
+        pips[i].addEventListener('click', clickOnPip);
+    }
+    var rangeInput = document.getElementById('range-input');
+    connectSlider.noUiSlider.on('update', function (values, handle) {
+        if (values[handle] == 0) {
+            rangeInput.value = '';
+        } else {
+            rangeInput.value = parseInt(values[handle]).toFixed(0);
+        }
+    });
+    rangeInput.addEventListener('keyup', function () {
+        if (this.value == '') {
+            connectSlider.noUiSlider.set(0);
+        } else {
+            connectSlider.noUiSlider.set(parseFloat(this.value));
+        }
+    });
+});
+</script>
 </body>
 </html>

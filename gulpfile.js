@@ -11,23 +11,23 @@ const rigger = require('gulp-rigger');
 
 
 const config = {
-    src: './',
+    src: './app',
     css: {
-        watch: './app/sass/**/*.+(sass|scss)',
-        src: './app/sass/styles.sass',
-        dest: './css'
+        watch: '/sass/**/*.+(sass|scss)',
+        src: '/sass/styles.sass',
+        dest: '/css'
     },
     html: {
-        src: '*.html'
+        src: '/*.html'
     },
     js: {
-        src: './js',
-        watch: './app/js/**/*.js'
+        src: '/js',
+        watch: ['/js/main.js', "/js/common.js"]
     }
 };
 
 gulp.task('sass', function () {
-    gulp.src(config.src + config.css.src)
+     return gulp.src(config.src + config.css.src)
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(gcmq())
@@ -45,14 +45,9 @@ gulp.task('sass', function () {
         }));
 });
 
-gulp.task('watch', ['browserSync', 'sass', 'scripts'], function () {
-    gulp.watch(config.src + config.html.src, browserSync.reload);
-    gulp.watch(config.src + config.css.watch, ['sass']);
-    gulp.watch(config.src + config.js.watch, ['scripts']);
-});
 
 gulp.task('browserSync', function () {
-    browserSync.init({
+    return browserSync.init({
         server: {
             baseDir: config.src
         }
@@ -61,38 +56,52 @@ gulp.task('browserSync', function () {
 
 gulp.task('scripts', function () {
     return gulp.src([
-        "./app/js/main.js"
+        "app/js/main.js"
     ])
         .pipe(rigger())
         .pipe(concat('scripts.min.js'))
         //.pipe(uglify())
-        .pipe(gulp.dest('./js'))
+        .pipe(gulp.dest('app/js'))
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('build', ['sass', 'scripts'], function() {
+gulp.task('build', gulp.series('sass', 'scripts', function() {
 
     var buildFiles = gulp.src([
-        '*.html',
-        '.htaccess',
+        './app/*.html',
+        './app/.htaccess',
     ]).pipe(gulp.dest('dist'));
 
     var buildCss = gulp.src([
-        './css/styles.css',
+        './app/css/styles.css',
     ]).pipe(gulp.dest('dist/css'));
 
     var buildJs = gulp.src([
-        './js/scripts.min.js',
+        './app/js/scripts.min.js',
     ]).pipe(gulp.dest('dist/js'));
 
     var buildFonts = gulp.src([
-        './fonts/**/*',
+        './app/fonts/**/*',
     ]).pipe(gulp.dest('dist/fonts'));
     var buildFonts = gulp.src([
-        './images/**/*',
+        './app/images/**/*',
     ]).pipe(gulp.dest('dist/images'));
 
+}));
+
+gulp.task('code', function() {
+    return gulp.src(config.html.src)
+        .pipe(browserSync.reload({ stream: true }))
 });
+
+gulp.task('watch', function () {
+    gulp.watch(config.src + config.html.src, gulp.parallel('code'));
+    gulp.watch(config.src + config.css.watch, gulp.parallel('sass'));
+    gulp.watch(config.src + config.js.watch, gulp.parallel('scripts'));
+});
+
+gulp.task('default', gulp.parallel('sass', 'scripts', 'browserSync', 'watch'));
+
 
 // gulp.task('removedist', function() { return del.sync('dist'); });
 // gulp.task('clearcache', function () { return cache.clearAll(); });

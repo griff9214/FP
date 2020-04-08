@@ -14,13 +14,19 @@
 @import "../../node_modules/bootstrap/scss/nav"
 @import "../../node_modules/bootstrap/scss/transitions"
 
+
+
 @import "_fonts"
 @import "_smartgrid"
 @import "__animations"
-@import "__hamburgers"
+
+@import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers"
 @import "../../node_modules/jquery.mmenu/dist/jquery.mmenu.all.css"
 @import "_nouislider"
 @import "__mmenu"
+
+@import "../../node_modules/slick-carousel/slick/slick.scss"
+@import "slick-theme"
 
 @import "_modal"
 
@@ -62,7 +68,6 @@ body
 
 // Стилизация кнопок и элементов форм
 .button
-  font-family: OpenSansSemiBold
   color: #ffffff
   font-size: 15px
   text-transform: uppercase
@@ -75,7 +80,7 @@ body
   text-align: center
   cursor: pointer
   &_squared
-    border-radius: 0px
+    border-radius: 0
   &_shadowed
     box-shadow: 0 0 19.24px 6.76px rgba(13, 162, 126, 0.2)
   &_anim-shadow
@@ -95,6 +100,9 @@ body
     padding-left: 20px
     padding-right: 20px
 
+.button
+  font-family: OpenSansSemiBold, sans-serif
+
 .to-top
   position: fixed
   right: 7%
@@ -109,7 +117,7 @@ body
 .checkbox
   display: block
   position: relative
-  font-family: RobotoRegular
+  font-family: RobotoRegular, sans-serif
   color: #222222
   font-size: 16px
   margin-bottom: 13px
@@ -179,7 +187,7 @@ header .hamburger
 
 .section-header
   font-size: 43px
-  font-family: RobotoBold
+  font-family: RobotoBold, sans-serif
   color: #222222
   text-transform: uppercase
   display: inline-block
@@ -195,17 +203,17 @@ header .hamburger
       height: 43px
       background: url("../images/title.png") no-repeat center center
       background-size: cover
-      margin: 0 auto
-      margin-bottom: 4px
+      margin: 0 auto 4px
+
   &_have-bord
     &:after
       content: ''
       display: block
       height: 3px
       width: 60px
-      margin: 0 auto
       background-color: $main-color
-      margin-top: 8px
+      margin: 8px auto 0
+
   &_text-centered
     margin-left: auto
     margin-right: auto
@@ -216,7 +224,7 @@ header .hamburger
 
 .sectionSubHeader
   font-size: 30px
-  font-family: RobotoBold
+  font-family: RobotoBold, sans-serif
   color: #222222
   text-transform: uppercase
   +xs-block
@@ -249,7 +257,7 @@ header .hamburger
       height: 56px
       flex-wrap: wrap
     &__url
-      font-family: OpenSansRegular
+      font-family: OpenSansRegular, sans-serif
       font-size: 15px
       color: #fff
       text-decoration: none
@@ -481,10 +489,10 @@ header .hamburger
       left: 0
       width: 100%
   &__header
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
     color: #ffffff
-    font-size: 65px
-    line-height: 46px
+    font-size: 45px
+    line-height: 50px
     text-transform: uppercase
     +lg-block
       font-size: 55px
@@ -504,7 +512,7 @@ header .hamburger
       +xs-block
         padding-top: 20px
   &__sub-header
-    font-family: RobotoRegular
+    font-family: RobotoRegular, sans-serif
     color: #ffffff
     font-size: 30px
     text-transform: uppercase
@@ -531,7 +539,7 @@ header .hamburger
       +xxs-block
         font-size: 18px
   &__text
-    font-family: RobotoRegular
+    font-family: RobotoRegular, sans-serif
     color: #ffffff
     font-size: 18px
     margin-top: 20px
@@ -584,7 +592,7 @@ header .hamburger
       +xs-block
         margin-left: 20px
     &__num
-      font-family: RobotoRegular
+      font-family: RobotoRegular, sans-serif
       color: #ffffff
       font-size: 36px
       display: flex
@@ -616,7 +624,7 @@ header .hamburger
 
     &__caption
       text-align: center
-      font-family: RobotoBold
+      font-family: RobotoBold, sans-serif
       color: #ffffff
       font-size: 16px
       text-transform: uppercase
@@ -752,7 +760,8 @@ header .hamburger
 
 .article
   &__paragraph
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
+
     color: #555555
     font-size: 14px
     line-height: 22px
@@ -805,7 +814,8 @@ header .hamburger
         left: 16%
         width: 90%
   &__caption
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
+
     font-size: 14px
     color: #222222
     text-transform: uppercase
@@ -823,8 +833,7 @@ header .hamburger
     padding-top: 35px
     padding-bottom: 50px
   &__button
-    margin: 0 auto
-    margin-top: 40px
+    margin: 40px auto 0
 
 .servicesRow
   +size(4)
@@ -853,7 +862,6 @@ header .hamburger
       & img
         max-width: inherit
         height: 100%
-        left: -30%
         position: absolute
         left: 0
         top: 0
@@ -949,7 +957,8 @@ header .hamburger
   &__title
     position: absolute
     display: inline-block
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
+
     font-size: 27px
     color: #ffffff
     text-align: center
@@ -980,7 +989,10 @@ header .hamburger
         margin-top: 7px
     &--bold
       display: block
-      font-family: OpenSansBold
+
+    &--bold
+      font-family: OpenSansBold,sans-serif
+
   &__linksBlock
     position: absolute
     left: 0
@@ -990,7 +1002,8 @@ header .hamburger
     flex-direction: column
     z-index: 2
   &__link
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
+
     font-size: 16px
     line-height: 20px
     color: #ffffff
@@ -1090,11 +1103,11 @@ header .hamburger
     +size-md(7)
     +size-sm(6)
     +size-xs(12)
-    font-family: OpenSansSemiBold
+    font-family: OpenSansSemiBold, sans-serif
     color: #ffffff
     font-size: 16px
   &__header
-    font-family: OpenSansBold
+    font-family: OpenSansBold, sans-serif
     color: #ffffff
     font-size: 42px
     text-transform: uppercase
@@ -1123,15 +1136,16 @@ header .hamburger
       margin-top: 0
     +xs-block
       max-width: 316px
-      margin: 0 auto
-      margin-top: 20px
+      margin: 20px auto 0
+
   &__input
     border-radius: 15px
     border: none
     width: 100%
     padding: 0 25px
     box-sizing: border-box
-    font-family: OpenSans
+    font-family: OpenSans, sans-serif
+
     color: #222222
     font-size: 20px
     letter-spacing: 6px
@@ -1146,8 +1160,7 @@ header .hamburger
     right: 0
     +md-block
       position: static
-      margin: 0 auto
-      margin-top: 10px
+      margin: 10px auto 0
 
 .aboutUs
   &__background
@@ -1191,7 +1204,8 @@ header .hamburger
   +xs-block
     font-size: 14px
   &__header
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #222222
     font-size: 22px
     text-transform: uppercase
@@ -1206,17 +1220,18 @@ header .hamburger
       display: block
       width: 61px
       height: 38px
-      margin: 0 auto
       background: url('../images/title-small.png') no-repeat center center
       background-size: contain
-      margin-bottom: 9px
+      margin: 0 auto 9px
+
     &--inmenu
       color: inherit
       margin-bottom: 0
 
 .someItems
   &__item
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
+
     color: #222222
     display: flex
     margin-bottom: 25px
@@ -1238,7 +1253,8 @@ header .hamburger
   +size-xxs(8)
   +offset-xxs(2)
   &__title
-    font-family: OpenSansSemiBold
+    font-family: OpenSansSemiBold, sans-serif
+
     color: #222222
     font-size: 16px
     text-transform: uppercase
@@ -1257,9 +1273,8 @@ header .hamburger
       transform: scale(0.8)
 
 .ourReviews
-  background: url("../images/russia.png") -28% center no-repeat, url("../images/russia.png") 128% center no-repeat
+  background: url("../images/russia.png") -28% center no-repeat, url("../images/russia.png") 128% center no-repeat #f5f5f5
   background-size: contain, contain
-  background-color: #f5f5f5
   +md-block
     background-size: 50%, 50%
     background-position: -50% center, 150% center
@@ -1327,7 +1342,8 @@ header .hamburger
         top: -25px
         bottom: auto
   &__firm
-    font-family: OpenSansLight
+    font-family: OpenSansLight, sans-serif
+
     color: #222222
     font-size: 15px
     padding-left: 24px
@@ -1335,7 +1351,8 @@ header .hamburger
     +xs-block
       font-size: 13px
   &__text
-    font-family: OpenSansItalic
+    font-family: OpenSansItalic, sans-serif
+
     color: #222222
     font-size: 18px
     display: block
@@ -1387,8 +1404,7 @@ header .hamburger
       position: static
       max-height: 120px
       display: block
-      margin: 0 auto
-      margin-top: 20px
+      margin: 20px auto 0
     +xxs-block
       max-height: 100px
       max-width: 320px
@@ -1397,7 +1413,8 @@ header .hamburger
       position: static
       margin: 15px auto 0
   &__author
-    font-family: OpenSansSemiBold
+    font-family: OpenSansSemiBold, sans-serif
+
     color: #222222
     font-size: 17px
     margin-left: 28px
@@ -1463,7 +1480,8 @@ header .hamburger
     margin-top: 20px
     text-align: center
     font-size: 14px
-    font-family: OpenSansSemiBold
+    font-family: OpenSansSemiBold, sans-serif
+
     color: #555555
     max-width: 100%
 
@@ -1528,7 +1546,7 @@ header .hamburger
       position: absolute
       left: 0
       height: 1px
-      width: 0%
+      width: 0
       bottom: -1px
       background-color: $main-color
       transition: all ease-in 0.5s
@@ -1544,16 +1562,18 @@ header .hamburger
     transition: all 0.5s
   &__day
     margin-top: 12px
-    font-family: OpenSansBold
+    font-family: OpenSansBold, sans-serif
+
     font-size: 25px
   &__month
-    font-family: OpenSansLight
+    font-family: OpenSansLight, sans-serif
     font-size: 12px
 
   &__title
     margin-top: 14px
     width: 78%
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #222222
     font-size: 16px
     text-transform: uppercase
@@ -1569,13 +1589,15 @@ header .hamburger
       color: #555555
   &__shortText
     margin-top: 17px
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
+
     line-height: 22px
     color: #555555
     font-size: 14px
     padding-left: 5px
   &__readIt
-    font-family: OpenSansLight
+    font-family: OpenSansLight, sans-serif
+
     margin-top: 17px
     color: #222222
     font-size: 14px
@@ -1646,10 +1668,9 @@ header .hamburger
       height: 37px
       background-image: url("../images/title-footer.png")
   &__text
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
     color: #ffffff
     font-size: 14px
-    color: #ffffff
     padding-top: 25px
   &__center-block
     +col
@@ -1693,12 +1714,12 @@ header .hamburger
     @at-root
       .footer-nav
         &__title
-          font-family: RobotoBold
+          font-family: RobotoBold, sans-serif
           color: #ffffff
           font-size: 18px
           text-transform: uppercase
         &__itemlink
-          font-family: RobotoRegular
+          font-family: RobotoRegular, sans-serif
           color: #ffffff
           font-size: 15px
           text-decoration: none
@@ -1710,7 +1731,8 @@ header .hamburger
         &__item
           padding-bottom: 7px
   &__header
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #ffffff
     font-size: 46px
     line-height: 47px
@@ -1720,7 +1742,8 @@ header .hamburger
       font-size: 40px
   &__subheader
     margin-top: 17px
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #ffffff
     font-size: 21px
     text-transform: uppercase
@@ -1755,12 +1778,14 @@ header .hamburger
     background-color: $main-color
   &__title
     text-align: center
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #ffffff
     font-size: 22px
     text-transform: uppercase
   &__subtitle
-    font-family: RobotoRegular
+    font-family: RobotoRegular, sans-serif
+
     color: #ffffff
     font-size: 15px
     text-align: center
@@ -1794,21 +1819,21 @@ header .hamburger
     padding-top: 17px
   &__input, &__textarea
     display: block
-    margin: 0 auto
     width: 80%
     border: none
     border-bottom: 1px solid #f0f0f0
-    font-family: OpenSansRegular
+    font-family: OpenSansRegular, sans-serif
     color: #666666
     font-size: 14px
     padding-left: 7px
     padding-bottom: 5px
-    margin-bottom: 18px
+    margin: 0 auto 18px
 //------------End of main page styles-----------------//
 
 //------------Рages styles-----------------//
 .breadcrumbs
-  font-family: RobotoMedium
+  font-family: RobotoMedium, sans-serif
+
   font-size: 16px
   color: #d1d1d1
   padding: 12px 0
@@ -1847,31 +1872,34 @@ header .hamburger
       display: block
       width: 61px
       height: 38px
-      margin: 0 auto
       background: url(../images/title-small.png) no-repeat center center
       background-size: contain
-      margin-bottom: 9px
+      margin: 0 auto 9px
+
   h1
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #222222
     font-size: 36px
     line-height: 40px
     margin-bottom: 34px
   h2
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #222222
     font-size: 26px
     line-height: 30px
   h3
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
     color: #222222
     font-size: 18px
   h4
-    font-family: RobotoBold
+    font-family: RobotoBold, sans-serif
+
     color: #222222
     font-size: 16px
   img.alignleft
-    margin: 0 10px 10px 0px
+    margin: 0 10px 10px 0
     float: left
   p
     margin-top: 20px
@@ -1958,7 +1986,8 @@ header .hamburger
 
 .page-content
   padding: 30px 0
-  font-family: OpenSans
+  font-family: OpenSans, sans-serif
+
   font-size: 20px
   line-height: 27px
   color: #555555
@@ -2047,7 +2076,8 @@ p.price-paragraph
   border-width: 3px
   border-color: #11b78f
   border-style: solid
-  font-family: RobotoRegular
+  font-family: RobotoRegular, sans-serif
+
   color: #222222
   text-align: center
   padding: 20px 40px 0
@@ -2089,8 +2119,7 @@ p.price-paragraph
 //calc
 .calc__select
   +size(6)
-@import "slick"
-@import "slick-theme"
+
 
 .calc-order
   display: flex
@@ -2155,7 +2184,7 @@ p.price-paragraph
 .vacancy
   &.active
     background-color: #fff
-    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.2)
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.2)
   &__header
     display: flex
     flex-direction: row
@@ -2163,17 +2192,17 @@ p.price-paragraph
     align-items: center
     justify-content: space-around
     &:hover
-      box-shadow: 0 5px 10px 0px rgba(0,0,0,0.15)
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.15)
       background-color: rgba($main-color, .2)
       cursor: pointer
   &__body
     display: none
     +col
-  &__header-text
+  //&__header-text
     //display: inline-block
     //vertical-align: middle
   &__header-icon
-    line-height: 0px
+    line-height: 0
   &__part
     display: flex
     flex-direction: row

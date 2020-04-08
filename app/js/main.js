@@ -1,6 +1,6 @@
 //= ./parallax.js
 //= ./scrollparallax.js
-//= ./slick.js
+//= ../../node_modules/slick-carousel/slick/slick.min.js
 //##= ../../node_modules/inputmask/dist/min/jquery.inputmask.bundle.js
 //##= ../../node_modules/inputmask/dist/inputmask/bindings/inputmask.binding.js
 //= ../../node_modules/inputmask/dist/inputmask/inputmask.js
