@@ -30,6 +30,6 @@
   },
   "description": "forpost frontend",
   "devDependencies": {
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.3.1"
   }
 }
